@@ -1,11 +1,11 @@
-import math
+import pandas
 
-def read_input(filename):
-    with open(filename, "r") as f:
-        return [ int(elem) for elem in f.read().split("\n") ]
+def load_input(filename):
+    df = pandas.read_csv(filename, header=None)
+    return df[0].values.tolist()
 
 def fuel_computation(data):
-    return math.floor(data / 3) - 2
+    return (data // 3) - 2
 
 def fuel_recursive(data):
     fuel = fuel_computation(data)

@@ -1,6 +1,6 @@
-from utils import read_input, fuel_recursive
+from utils import load_input, fuel_recursive
 
-data = read_input("input.txt")
+data = load_input("input.txt")
 
 result = [fuel_recursive(elem) for elem in data]
 
