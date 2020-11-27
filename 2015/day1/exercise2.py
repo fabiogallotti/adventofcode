@@ -1,6 +1,4 @@
-def read_input(filename):
-    with open(filename, "r") as f:
-        return [ elem for elem in f.read() ]
+from read_input import read_input
 
 data = read_input("input.txt")
 
