@@ -1,4 +1,4 @@
-from common import calculate_area, calculate_ribbon
+from common_day2 import calculate_area, calculate_ribbon
 
 
 def test_calculate_area():

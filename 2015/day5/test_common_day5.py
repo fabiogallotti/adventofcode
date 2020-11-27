@@ -1,4 +1,4 @@
-from common import (
+from common_day5 import (
     three_vowels,
     twice_in_a_row,
     contains,
