@@ -4,17 +4,12 @@ def read_input(filename):
 
 
 def three_vowels(string):
-    count = 0
-    for vowel in "aeiou":
-        count += string.count(vowel)
+    count = sum(string.count(vowel) for vowel in "aeiou")
     return count > 2
 
 
 def twice_in_a_row(string):
-    for i in range(len(string) - 1):
-        if string[i] == string[i + 1]:
-            return True
-    return False
+    return any(string[i] == string[i + 1] for i in range(len(string) - 1))
 
 
 def contains(string):
@@ -36,10 +31,7 @@ def pair_two_letters(string):
 
 
 def repeats_with_one_between(string):
-    for i in range(len(string) - 2):
-        if string[i] == string[i + 2]:
-            return True
-    return False
+    return any(string[i] == string[i + 2] for i in range(len(string) - 2))
 
 
 def nice_string_second(string):
