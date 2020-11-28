@@ -1,8 +1,8 @@
 from src.year2015.day3.functions import (
     move,
     move_and_add,
-    santa_delivers,
     santa_and_robo_delivers,
+    santa_delivers,
 )
 
 
