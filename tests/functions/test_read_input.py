@@ -1,7 +1,7 @@
 from src.functions.read_input import (
-    read_one_line,
-    read_multiple_lines_x_separated,
     read_multiple_lines,
+    read_multiple_lines_x_separated,
+    read_one_line,
 )
 
 PATH = "tests/functions/resources"
