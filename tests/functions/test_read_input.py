@@ -16,13 +16,18 @@ def test_multiple_lines_x_separated():
         f"{PATH}/multiple_lines_x_separated.txt", "x"
     ) == [["1", "2", "3"], ["10", "11", "12"]]
 
+
 def test_multiple_lines():
     assert read_multiple_lines(f"{PATH}/multiple_lines.txt") == [
         "wkzasuyckmgwddwy",
         "eixpkpdhsjmynxhi",
     ]
 
+
 def test_multiple_lines_space_separated():
     assert read_multiple_lines_separated(
         f"{PATH}/multiple_lines_space_separated.txt", " "
-    ) == [["turn", "on", "887,9", "through", "959,629"], ["turn", "on", "454,398", "through", "844,448"]]
+    ) == [
+        ["turn", "on", "887,9", "through", "959,629"],
+        ["turn", "on", "454,398", "through", "844,448"],
+    ]
