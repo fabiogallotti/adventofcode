@@ -1,7 +1,7 @@
 from src.year2015.day6.functions import (
-    get_points,
-    calculate_lights_on,
     calculate_brightness,
+    calculate_lights_on,
+    get_points,
 )
 
 
