@@ -27,6 +27,7 @@ def test_calculate_lights_on():
 def test_calculate_brightness():
     lights = [[0 for row in range(1000)] for column in range(1000)]
     assert calculate_brightness([["turn", "on", "0,0", "through", "0,0"]], lights) == 1
+    assert calculate_brightness([["turn", "off", "0,0", "through", "0,0"]], lights) == 0
 
     lights = [[0 for row in range(1000)] for column in range(1000)]
     assert (
