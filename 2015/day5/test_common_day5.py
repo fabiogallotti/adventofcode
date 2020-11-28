@@ -1,11 +1,11 @@
 from common_day5 import (
-    three_vowels,
-    twice_in_a_row,
     contains,
     nice_string_first,
+    nice_string_second,
     pair_two_letters,
     repeats_with_one_between,
-    nice_string_second,
+    three_vowels,
+    twice_in_a_row,
 )
 
 

@@ -1,4 +1,4 @@
-from common_day2 import read_input, calculate_area
+from common_day2 import calculate_area, read_input
 
 data = read_input("input.txt")
 

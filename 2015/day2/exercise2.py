@@ -1,4 +1,4 @@
-from common_day2 import read_input, calculate_ribbon
+from common_day2 import calculate_ribbon, read_input
 
 data = read_input("input.txt")
 

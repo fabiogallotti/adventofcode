@@ -1,4 +1,4 @@
-from common_day5 import read_input, nice_string_second
+from common_day5 import nice_string_second, read_input
 
 data = read_input("input.txt")
 
