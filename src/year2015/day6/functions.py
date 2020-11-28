@@ -1,8 +1,3 @@
-def read_input(filename):
-    with open(filename, "r") as f:
-        return [elem.split(" ") for elem in f.read().split("\n")]
-
-
 def get_points(elem):
     starting_x, starting_y = elem[0].split(",")
     ending_x, ending_y = elem[2].split(",")

@@ -1,6 +1,8 @@
-from common_day6 import read_input, toogle_lights, turn_lights
+from functions.read_input import read_multiple_lines_separated
+from inputs.path import PATH
+from .functions import toogle_lights, turn_lights
 
-data = read_input("input.txt")
+data = read_multiple_lines_separated(f"{PATH}/2015day6.txt", " ")
 
 lights = [[0 for row in range(1000)] for column in range(1000)]
 
