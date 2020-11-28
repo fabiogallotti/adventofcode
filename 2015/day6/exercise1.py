@@ -1,4 +1,4 @@
-from common_day6 import read_input, turn_lights, toogle_lights
+from common_day6 import read_input, toogle_lights, turn_lights
 
 data = read_input("input.txt")
 

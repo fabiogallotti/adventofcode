@@ -1,4 +1,4 @@
-from common import read_input, move
+from common import move, read_input
 
 data = read_input("input.txt")
 
