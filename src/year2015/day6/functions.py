@@ -35,12 +35,14 @@ def toogle(elem, matrix):
 def increase_brightness(elem, matrix, amount):
     loop_on_matrix(elem, matrix, "brightness", amount)
 
+
 def total_in_matrix(matrix):
     return sum(
         matrix[row][column]
         for row in range(len(matrix[:][0]))
         for column in range(len(matrix[0][:]))
     )
+
 
 def calculate_lights_on(data, lights):
     for elem in data:
@@ -53,6 +55,7 @@ def calculate_lights_on(data, lights):
 
     return total_in_matrix(lights)
 
+
 def calculate_brightness(data, lights):
     for elem in data:
         if elem[0] == "turn" and elem[1] == "on":
@@ -63,4 +66,3 @@ def calculate_brightness(data, lights):
             increase_brightness(elem[1:], lights, 2)
 
     return total_in_matrix(lights)
-
