@@ -11,4 +11,3 @@ def read_multiple_lines_separated(filename, separator):
 def read_multiple_lines(filename):
     with open(filename, "r") as f:
         return [elem for elem in f.read().split("\n")]
-
