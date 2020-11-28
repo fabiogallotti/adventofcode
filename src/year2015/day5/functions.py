@@ -3,8 +3,12 @@ def three_vowels(string):
     return count > 2
 
 
+def check_after_n_letters(string, n):
+    return any(string[i] == string[i + n] for i in range(len(string) - n))
+
+
 def twice_in_a_row(string):
-    return any(string[i] == string[i + 1] for i in range(len(string) - 1))
+    return check_after_n_letters(string, 1)
 
 
 def contains(string):
@@ -26,7 +30,7 @@ def pair_two_letters(string):
 
 
 def repeats_with_one_between(string):
-    return any(string[i] == string[i + 2] for i in range(len(string) - 2))
+    return check_after_n_letters(string, 2)
 
 
 def nice_string_second(string):
