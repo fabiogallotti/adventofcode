@@ -1,8 +1,3 @@
-def read_input(filename):
-    with open(filename, "r") as f:
-        return [elem for elem in f.read().split("\n")]
-
-
 def three_vowels(string):
     count = sum(string.count(vowel) for vowel in "aeiou")
     return count > 2
