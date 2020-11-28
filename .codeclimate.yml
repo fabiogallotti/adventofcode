@@ -1,2 +1,2 @@
 exclude_patterns:
-- "**/test_*.py"
+- "tests/"

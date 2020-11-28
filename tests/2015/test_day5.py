@@ -1,4 +1,4 @@
-from common_day5 import (
+from src.year2015.day5.functions import (
     contains,
     nice_string_first,
     nice_string_second,
