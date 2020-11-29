@@ -7,6 +7,6 @@ data = read_multiple_lines_separated(f"{PATH}/2015day7.txt", " ")
 
 wires = preprocessing(data)
 
-emulate_circuit(wires)
+emulate_circuit(wires, "a")
 
 print(wires["a"])
