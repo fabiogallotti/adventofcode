@@ -12,10 +12,6 @@ def test_emulate_circuit():
         "g": ["y", "RSHIFT", "2"],
         "h": ["NOT", "x"],
         "i": ["NOT", "y"],
-        "a": ["x"],
-        "b": ["c", "AND", "j"],
-        "c": ["d", "OR", "y"],
-        "j": ["h", "AND", "i"],
     }
 
     assert (
@@ -29,14 +25,40 @@ def test_emulate_circuit():
                 ["y", "RSHIFT", "2", "->", "g"],
                 ["NOT", "x", "->", "h"],
                 ["NOT", "y", "->", "i"],
-                ["x", "->", "a"],
-                ["c", "AND", "j", "->", "b"],
-                ["d", "OR", "y", "->", "c"],
-                ["h", "AND", "i", "->", "j"],
             ]
         )
         == wires
     )
+
+    emulate_circuit(wires, "i")
+    assert wires == {
+        "d": 72,
+        "e": 507,
+        "f": 492,
+        "g": 114,
+        "h": 65412,
+        "i": 65079,
+        "x": 123,
+        "y": 456,
+    }
+
+
+def test_emulate_circuit2():
+
+    wires = {
+        "a": ["x"],
+        "b": ["2", "AND", "j"],
+        "c": ["d", "OR", "y"],
+        "x": 123,
+        "y": 456,
+        "d": ["x", "AND", "y"],
+        "e": ["x", "OR", "y"],
+        "f": ["x", "LSHIFT", "2"],
+        "g": ["2", "RSHIFT", "y"],
+        "h": ["NOT", "x"],
+        "i": ["NOT", "y"],
+        "j": ["h", "AND", "i"],
+    }
 
     emulate_circuit(wires, "b")
     assert wires == {
@@ -46,7 +68,7 @@ def test_emulate_circuit():
         "d": 72,
         "e": 507,
         "f": 492,
-        "g": 114,
+        "g": 0,
         "h": 65412,
         "i": 65079,
         "j": 65028,

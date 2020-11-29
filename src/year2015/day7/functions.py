@@ -45,9 +45,8 @@ def check_operations(wires, wire, instruction, operation):
             wires[wire] = operators[operation](
                 int(wires[instruction[0]]), int(wires[instruction[2]])
             )
-    except:
-        pass
-
+    except KeyError:
+        print("ciao" + wire)
 
 def decisions(wires, wire, instruction):
     if instruction[0] == "NOT":
@@ -75,5 +74,5 @@ def emulate_circuit(wires, stopping_condition):
                 elif len(instruction) == 1:
                     assign_values(wires, wire, instruction[0], int)
 
-        if type(wires[stopping_condition]) is int:
+        if check_int(wires[stopping_condition]):
             break
