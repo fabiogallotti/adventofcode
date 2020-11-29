@@ -59,24 +59,25 @@ def check_operations(wires, wire, instruction, operation):
 def emulate_circuit(wires):
     while True:
         for wire, instruction in wires.items():
-            if type(instruction) is not int and len(instruction) > 1:
-                if instruction[0] == "NOT":
-                    check_not(wires, wire, instruction)
+            if type(instruction) is not int:
+                if len(instruction) > 1:
+                    if instruction[0] == "NOT":
+                        check_not(wires, wire, instruction)
 
-                elif instruction[1] == "AND":
-                    check_operations(wires, wire, instruction, "AND")
+                    elif instruction[1] == "AND":
+                        check_operations(wires, wire, instruction, "AND")
 
-                elif instruction[1] == "OR":
-                    check_operations(wires, wire, instruction, "OR")
+                    elif instruction[1] == "OR":
+                        check_operations(wires, wire, instruction, "OR")
 
-                elif instruction[1] == "LSHIFT":
-                    check_operations(wires, wire, instruction, "LSHIFT")
+                    elif instruction[1] == "LSHIFT":
+                        check_operations(wires, wire, instruction, "LSHIFT")
 
-                elif instruction[1] == "RSHIFT":
-                    check_operations(wires, wire, instruction, "RSHIFT")
+                    elif instruction[1] == "RSHIFT":
+                        check_operations(wires, wire, instruction, "RSHIFT")
 
-            elif type(instruction) is not int and len(instruction) == 1:
-                assign_value(wires, wire, instruction)
+                elif len(instruction) == 1:
+                    assign_value(wires, wire, instruction)
 
         if type(wires["a"]) is int:
             break
