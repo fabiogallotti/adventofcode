@@ -48,6 +48,7 @@ def check_operations(wires, wire, instruction, operation):
     except KeyError:
         print("ciao" + wire)
 
+
 def decisions(wires, wire, instruction):
     if instruction[0] == "NOT":
         assign_values(wires, wire, instruction[1], bitwise_not)
