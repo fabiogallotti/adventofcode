@@ -1,4 +1,4 @@
-from src.year2015.day7.functions import preprocessing, emulate_circuit
+from src.year2015.day7.functions import emulate_circuit, preprocessing
 
 
 def test_emulate_circuit():
@@ -12,7 +12,7 @@ def test_emulate_circuit():
         "g": ["y", "RSHIFT", "2"],
         "h": ["NOT", "x"],
         "i": ["NOT", "y"],
-        "a": ["x"]
+        "a": ["x"],
     }
 
     assert (
