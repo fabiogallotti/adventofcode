@@ -38,17 +38,11 @@ def check_operations(wires, wire, instruction, operation):
             wires[wire] = operators[operation](
                 int(instruction[0]), int(wires[instruction[2]])
             )
-    except:
-        pass
-    try:
-        if type(wires[instruction[0]]) == int and instruction[2].isnumeric():
+        elif type(wires[instruction[0]]) == int and instruction[2].isnumeric():
             wires[wire] = operators[operation](
                 int(wires[instruction[0]]), int(instruction[2])
             )
-    except:
-        pass
-    try:
-        if type(wires[instruction[0]]) == int and type(wires[instruction[2]]) == int:
+        elif type(wires[instruction[0]]) == int and type(wires[instruction[2]]) == int:
             wires[wire] = operators[operation](
                 int(wires[instruction[0]]), int(wires[instruction[2]])
             )
