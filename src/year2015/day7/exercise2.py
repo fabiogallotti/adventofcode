@@ -9,6 +9,6 @@ wires = preprocessing(data)
 
 wires["b"] = 16076
 
-emulate_circuit(wires)
+emulate_circuit(wires, "a")
 
 print(wires["a"])
