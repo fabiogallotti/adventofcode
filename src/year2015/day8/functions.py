@@ -9,6 +9,7 @@ def difference_string_memory(data):
 def remove_double_quotes(elem):
     return elem[1 : len(elem) - 1]
 
+
 def memory_representation_length(data):
     memory_length = 0
     for elem in data:
