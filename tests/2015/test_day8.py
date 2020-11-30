@@ -1,7 +1,7 @@
 from src.year2015.day8.functions import (
-    string_representation_length,
-    memory_representation_length,
     difference_string_memory,
+    memory_representation_length,
+    string_representation_length,
 )
 
 
