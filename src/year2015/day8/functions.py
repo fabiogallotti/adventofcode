@@ -1,5 +1,5 @@
 def string_representation_length(data):
-    return sum(len(elem[0]) for elem in data)
+    return sum(len(elem) for elem in data)
 
 
 def difference_string_memory(data):
@@ -14,9 +14,9 @@ def memory_representation_length(data):
     memory_length = 0
     for elem in data:
 
-        if len(elem[0]) > 2:
+        if len(elem) > 2:
 
-            memory_elem = remove_double_quotes(elem[0])
+            memory_elem = remove_double_quotes(elem)
 
             i = 1
             while i <= len(memory_elem):
@@ -33,8 +33,8 @@ def memory_representation_length(data):
 def new_representation_length(data):
     new_length = 0
     for elem in data:
-        for i in range(1, len(elem[0]) + 1):
-            if elem[0][i - 1] in ["\\", '"']:
+        for i in range(1, len(elem) + 1):
+            if elem[i - 1] in ["\\", '"']:
                 new_length += 1
             new_length += 1
         new_length += 2
