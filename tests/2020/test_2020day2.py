@@ -36,6 +36,7 @@ def test_solve_problem_2():
         == 1
     )
 
+
 def test_solve_problem_2_custom():
     assert (
         solve_problem(
