@@ -1,7 +1,7 @@
 from functions.read_input import read_input
 from inputs.path import PATH
 
-from .functions import set_initial_state, calculate
+from .functions import calculate, set_initial_state
 
 for a in range(100):
     for b in range(100):
