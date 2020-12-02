@@ -46,7 +46,7 @@ def check_operations(wires, wire, instruction, operation):
                 int(wires[instruction[0]]), int(wires[instruction[2]])
             )
     except KeyError:
-        print("ciao" + wire)
+        pass
 
 
 def decisions(wires, wire, instruction):
