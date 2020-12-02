@@ -1,5 +1,6 @@
 from src.year2019.day1.functions import fuel_computation, fuel_recursive
 
+
 def test_fuel_computation():
     assert fuel_computation(12) == 2
     assert fuel_computation(14) == 2
