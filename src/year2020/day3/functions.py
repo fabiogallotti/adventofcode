@@ -5,8 +5,7 @@ def trees_for_given_slope(data, right, down):
     return sum(
         1
         for i in range(num_rows)
-        if i * down < num_rows
-        and data[i * down][i * right % num_columns] == "#"
+        if i * down < num_rows and data[i * down][i * right % num_columns] == "#"
     )
 
 
