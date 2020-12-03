@@ -5,7 +5,7 @@ from .functions import calculate, set_initial_state
 
 for a in range(100):
     for b in range(100):
-        data = read_input(f"{PATH}/2019day2.txt")
+        data = read_input(f"{PATH}/2019/day2.txt")
         data = [int(elem) for elem in data[0].split(",")]
 
         set_initial_state(data, a, b)

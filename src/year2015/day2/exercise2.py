@@ -3,7 +3,7 @@ from inputs.path import PATH
 
 from .functions import calculate_ribbon
 
-data = read_input(f"{PATH}/2015day2.txt")
+data = read_input(f"{PATH}/2015/day2.txt")
 data = [elem.split("x") for elem in data]
 
 

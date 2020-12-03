@@ -3,7 +3,7 @@ from inputs.path import PATH
 
 from .functions import calculate, set_initial_state
 
-data = read_input(f"{PATH}/2019day2.txt")
+data = read_input(f"{PATH}/2019/day2.txt")
 data = [int(elem) for elem in data[0].split(",")]
 
 set_initial_state(data, 12, 2)
