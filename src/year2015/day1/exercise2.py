@@ -3,7 +3,7 @@ from inputs.path import PATH
 
 from .functions import first_basement
 
-data = read_input(f"{PATH}/2015day1.txt")
+data = read_input(f"{PATH}/2015/day1.txt")
 
 count = first_basement(data[0])
 
