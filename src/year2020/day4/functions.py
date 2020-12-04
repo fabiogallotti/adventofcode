@@ -33,8 +33,10 @@ def preprocessing(data):
 
     return dict_passports
 
+
 def valid_passport(passport):
     return required_fields <= passport.keys()
+
 
 def valid_byr(byr):
     return 1920 <= byr <= 2002
@@ -80,7 +82,8 @@ def valid_pid(pid):
 
 def validate_data_passport(passport):
     if valid_passport(passport):
-        return (valid_byr(int(passport["byr"]))
+        return (
+            valid_byr(int(passport["byr"]))
             and valid_iyr(int(passport["iyr"]))
             and valid_eyr(int(passport["eyr"]))
             and valid_hgt(passport["hgt"])

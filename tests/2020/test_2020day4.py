@@ -1,12 +1,12 @@
 from src.year2020.day4.functions import (
     preprocessing,
-    valid_passport,
     valid_byr,
-    valid_iyr,
-    valid_eyr,
-    valid_hgt,
-    valid_hcl,
     valid_ecl,
+    valid_eyr,
+    valid_hcl,
+    valid_hgt,
+    valid_iyr,
+    valid_passport,
     valid_pid,
     validate_data_passport,
 )
