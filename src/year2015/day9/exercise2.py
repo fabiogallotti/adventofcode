@@ -1,7 +1,7 @@
 from functions.read_input import read_input
 from inputs.path import PATH
 
-from .functions import preprocessing, longest_path_length
+from .functions import longest_path_length, preprocessing
 
 data = read_input(f"{PATH}/2015/day9.txt")
 

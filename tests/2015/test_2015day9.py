@@ -1,7 +1,7 @@
 from src.year2015.day9.functions import (
+    longest_path_length,
     preprocessing,
     shortest_path_length,
-    longest_path_length,
 )
 
 
