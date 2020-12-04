@@ -1,14 +1,15 @@
 def concatenate_string(number_of_digits, digits):
-    look_and_say=""
+    look_and_say = ""
     for i, elem in enumerate(number_of_digits):
         look_and_say += number_of_digits[i] + digits[i]
     return look_and_say
+
 
 def look_and_say(data):
     number_of_digits = []
     digits = []
     digit = data[0]
-    times=0
+    times = 0
 
     for i in range(len(data)):
         if data[i] == digit:
