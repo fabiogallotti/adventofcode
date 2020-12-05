@@ -1,4 +1,8 @@
-from src.year2015.day02.functions import calculate_area, calculate_ribbon, convert_to_int
+from src.year2015.day02.functions import (
+    calculate_area,
+    calculate_ribbon,
+    convert_to_int,
+)
 
 
 def test_calculate_area():

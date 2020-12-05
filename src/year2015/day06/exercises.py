@@ -1,7 +1,7 @@
 from functions.read_input import read_input
 from inputs.path import PATH
 
-from .functions import calculate_lights_on, calculate_brightness
+from .functions import calculate_brightness, calculate_lights_on
 
 data = read_input(f"{PATH}/2015/day6.txt")
 data = [elem.split(" ") for elem in data]
