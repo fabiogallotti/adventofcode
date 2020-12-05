@@ -1,0 +1,15 @@
+from functions.read_input import read_input
+from inputs.path import PATH
+
+from .functions import preprocessing, how_many_in_group, solve_problem
+
+data = read_input(f"{PATH}/2020/day06.txt")
+
+forms = preprocessing(data)
+
+how_many = how_many_in_group(forms, data)
+print(how_many)
+
+print(f"First part: {solve_problem(1, forms)}")
+
+print(f"Second part: {solve_problem(2, forms, how_many)}")
