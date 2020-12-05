@@ -3,7 +3,7 @@ from inputs.path import PATH
 
 from .functions import fuel_computation, fuel_recursive
 
-data = read_input(f"{PATH}/2019/day1.txt")
+data = read_input(f"{PATH}/2019/day01.txt")
 
 print(f"First part: {sum(fuel_computation(int(elem)) for elem in data)}")
 

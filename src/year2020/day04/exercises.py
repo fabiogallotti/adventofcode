@@ -3,7 +3,7 @@ from inputs.path import PATH
 
 from .functions import preprocessing, valid_passport, validate_data_passport
 
-data = read_input(f"{PATH}/2020/day4.txt")
+data = read_input(f"{PATH}/2020/day04.txt")
 
 passports = preprocessing(data)
 

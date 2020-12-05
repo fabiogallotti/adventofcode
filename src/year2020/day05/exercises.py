@@ -3,7 +3,7 @@ from inputs.path import PATH
 
 from .functions import find_missing_seat_id, find_seat_ids
 
-data = read_input(f"{PATH}/2020/day5.txt")
+data = read_input(f"{PATH}/2020/day05.txt")
 
 seat_ids = find_seat_ids(data)
 
