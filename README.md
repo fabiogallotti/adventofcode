@@ -9,4 +9,4 @@
 
 From the `src/yearXXXX` folder:
 
-`python -m <yearXXXX>.<day>.<exercise>`
+`python -m <yearXXXX>.<dayYY>.exercises`
