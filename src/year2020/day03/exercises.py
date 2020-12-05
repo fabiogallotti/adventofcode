@@ -3,7 +3,7 @@ from inputs.path import PATH
 
 from .functions import product_of_multiple_slopes, trees_for_given_slope
 
-data = read_input(f"{PATH}/2020/day3.txt")
+data = read_input(f"{PATH}/2020/day03.txt")
 
 print(f"First part: {trees_for_given_slope(data, 3, 1)}")
 
