@@ -1,7 +1,7 @@
 from functions.read_input import read_input
 from inputs.path import PATH
 
-from .functions import preprocessing, how_many_in_group, solve_problem
+from .functions import how_many_in_group, preprocessing, solve_problem
 
 data = read_input(f"{PATH}/2020/day06.txt")
 
