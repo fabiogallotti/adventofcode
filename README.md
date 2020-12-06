@@ -11,7 +11,7 @@
 | 01 | [✓][012015] |  |  |  | [✓][012019] | [✓][012020] |
 | 02 | [✓][022015] |  |  |  | [✓][022019] | [✓][022020] |
 | 03 | [✓][032015] |  |  |  | [✓][032019] | [✓][032020] |
-| 04 | [✓][042015] |  |  |  |  | [✓][042020] |
+| 04 | [✓][042015] |  |  |  | [✓][042019] | [✓][042020] |
 | 05 | [✓][052015] |  |  |  |  | [✓][052020] |
 | 06 | [✓][062015] |  |  |  |  | [✓][062020] |
 | 07 | [✓][072015] |  |  |  |  |  |
@@ -32,6 +32,7 @@
 [012019]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2019/day01
 [022019]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2019/day02
 [032019]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2019/day03
+[042019]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2019/day04
 [012020]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2020/day01
 [022020]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2020/day02
 [032020]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2020/day03
