@@ -8,7 +8,6 @@ data = read_input(f"{PATH}/2020/day06.txt")
 forms = preprocessing(data)
 
 how_many = how_many_in_group(forms, data)
-print(how_many)
 
 print(f"First part: {solve_problem(1, forms)}")
 
