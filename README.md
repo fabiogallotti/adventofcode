@@ -3,7 +3,40 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/5313ca61f9e8394032a6/maintainability)](https://codeclimate.com/github/fabiogallotti/adventofcode/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/5313ca61f9e8394032a6/test_coverage)](https://codeclimate.com/github/fabiogallotti/adventofcode/test_coverage)
 
-# Advent of code
+# Advent Of Code Solutions in Python
+
+
+|    | 2015        | 2016        | 2017        | 2018        | 2019        | 2020        |
+| -  | -           | -           | -           | -           | -           | -           |
+| 01 | [✓][012015] |  |  |  | [✓][012019] | [✓][012020] |
+| 02 | [✓][022015] |  |  |  | [✓][022019] | [✓][022020] |
+| 03 | [✓][032015] |  |  |  |  | [✓][032020] |
+| 04 | [✓][042015] |  |  |  |  | [✓][042020] |
+| 05 | [✓][052015] |  |  |  |  | [✓][052020] |
+| 06 | [✓][062015] |  |  |  |  | [✓][062020] |
+| 07 | [✓][072015] |  |  |  |  |  |
+| 08 | [✓][082015] |  |  |  |  |  |
+| 09 | [✓][092015] |  |  |  |  |  |
+| 10 | [✓][102015] |  |  |  |  |  |
+
+[012015]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2015/day01
+[022015]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2015/day02
+[032015]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2015/day03
+[042015]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2015/day04
+[052015]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2015/day05
+[062015]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2015/day06
+[072015]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2015/day07
+[082015]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2015/day08
+[092015]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2015/day09
+[102015]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2015/day10
+[012019]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2019/day01
+[022019]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2019/day02
+[012020]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2020/day01
+[022020]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2020/day02
+[032020]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2020/day03
+[042020]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2020/day04
+[052020]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2020/day05
+[062020]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2020/day06
 
 ## To run an exercise ##
 
