@@ -1,4 +1,4 @@
-from src.year2020.day06.functions import preprocessing, solve_problem, how_many_in_group
+from src.year2020.day06.functions import how_many_in_group, preprocessing, solve_problem
 
 
 def test_preprocessing():
