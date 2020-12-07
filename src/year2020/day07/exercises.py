@@ -1,7 +1,7 @@
 from functions.read_input import read_input
 from inputs.path import PATH
 
-from .functions import preprocessing, number_containing_bags, bag_size
+from .functions import bag_size, number_containing_bags, preprocessing
 
 data = read_input(f"{PATH}/2020/day07.txt")
 
