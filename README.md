@@ -12,10 +12,10 @@
 | 02 | [✓][022015] |  |  |  | [✓][022019] | [✓][022020] |
 | 03 | [✓][032015] |  |  |  | [✓][032019] | [✓][032020] |
 | 04 | [✓][042015] |  |  |  | [✓][042019] | [✓][042020] |
-| 05 | [✓][052015] |  |  |  |  | [✓][052020] |
-| 06 | [✓][062015] |  |  |  |  | [✓][062020] |
+| 05 | [✓][052015] |  |  |  | [✓][052020] | [✓][052020] |
+| 06 | [✓][062015] |  |  |  | [✓][062020] | [✓][062020] |
 | 07 | [✓][072015] |  |  |  |  | [✓][072020] |
-| 08 | [✓][082015] |  |  |  |  | [✓][082020] |
+| 08 | [✓][082015] |  |  |  | [✓][082020] | [✓][082020] |
 | 09 | [✓][092015] |  |  |  |  |  |
 | 10 | [✓][102015] |  |  |  |  |  |
 | 11 | [✓][112015] |  |  |  |  |  |
@@ -35,6 +35,9 @@
 [022019]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2019/day02
 [032019]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2019/day03
 [042019]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2019/day04
+[052019]: https://github.com/fabiogallotti/adventofcode/tree/oldcode/src/year2019/day6
+[062019]: https://github.com/fabiogallotti/adventofcode/tree/oldcode/src/year2019/day7
+[082019]: https://github.com/fabiogallotti/adventofcode/tree/oldcode/src/year2019/day8
 [012020]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2020/day01
 [022020]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2020/day02
 [032020]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2020/day03
