@@ -12,4 +12,3 @@ next_word = next_word(next_pwd)
 print(f"First part: {next_pwd}")
 
 print(f"Second part: {next_password(next_word)}")
-
