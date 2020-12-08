@@ -15,7 +15,7 @@
 | 05 | [✓][052015] |  |  |  |  | [✓][052020] |
 | 06 | [✓][062015] |  |  |  |  | [✓][062020] |
 | 07 | [✓][072015] |  |  |  |  | [✓][072020] |
-| 08 | [✓][082015] |  |  |  |  |  |
+| 08 | [✓][082015] |  |  |  |  | [✓][082020] |
 | 09 | [✓][092015] |  |  |  |  |  |
 | 10 | [✓][102015] |  |  |  |  |  |
 
@@ -40,7 +40,7 @@
 [052020]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2020/day05
 [062020]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2020/day06
 [072020]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2020/day07
-
+[082020]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2020/day08
 ## To run an exercise ##
 
 From the `src/yearXXXX` folder:
