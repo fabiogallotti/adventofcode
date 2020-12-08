@@ -1,12 +1,13 @@
 def execute_instructions(data, i, value):
     if data[i][0] == "acc":
         value += int(data[i][1])
-        i+=1
+        i += 1
     elif data[i][0] == "jmp":
         i += int(data[i][1])
     elif data[i][0] == "nop":
-        i+=1
+        i += 1
     return i, value
+
 
 def calculate_accumulator_value(data):
     value = 0
@@ -28,11 +29,11 @@ def calculate_value_switching_positions(data, positions):
         value = 0
         i = 0
         visited = []
-        while i<len(data):
+        while i < len(data):
             if i in visited:
                 break
             elif i == position:
-                i+=1
+                i += 1
 
             visited.append(i)
             i, value = execute_instructions(data, i, value)
