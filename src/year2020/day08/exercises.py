@@ -1,7 +1,11 @@
 from functions.read_input import read_input
 from inputs.path import PATH
 
-from .functions import calculate_accumulator_value, find_positions, calculate_value_switching_positions
+from .functions import (
+    calculate_accumulator_value,
+    calculate_value_switching_positions,
+    find_positions,
+)
 
 data = read_input(f"{PATH}/2020/day08.txt")
 data = [elem.split() for elem in data]
