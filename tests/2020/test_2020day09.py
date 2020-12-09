@@ -27,6 +27,7 @@ def test_find_not_sum_preamble():
 
     assert find_not_sum_preamble(data, 5) == 127
 
+
 def test_sum_weakness():
     data = [
         35,
