@@ -1,9 +1,9 @@
+import json
+
 from functions.read_input import read_input
 from inputs.path import PATH
 
 from .functions import sum_ints, sum_ints_no_red
-
-import json
 
 data = read_input(f"{PATH}/2015/day12.txt")
 data = data[0]
