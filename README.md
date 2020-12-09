@@ -19,6 +19,7 @@
 | 09 | [✓][092015] |  |  |  |  | [✓][092020] |
 | 10 | [✓][102015] |  |  |  |  |  |
 | 11 | [✓][112015] |  |  |  |  |  |
+| 12 | [✓][122015] |  |  |  |  |  |
 
 [012015]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2015/day01
 [022015]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2015/day02
@@ -31,6 +32,7 @@
 [092015]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2015/day09
 [102015]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2015/day10
 [112015]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2015/day11
+[122015]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2015/day12
 [012019]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2019/day01
 [022019]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2019/day02
 [032019]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2019/day03
