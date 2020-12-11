@@ -5,7 +5,6 @@
 
 # Advent Of Code Solutions in Python
 
-
 |    | 2015        | 2016        | 2017        | 2018        | 2019        | 2020        |
 | -  | -           | -           | -           | -           | -           | -           |
 | 01 | [✓][012015] |  |  |  | [✓][012019] | [✓][012020] |
@@ -18,7 +17,7 @@
 | 08 | [✓][082015] |  |  |  |  | [✓][082020] |
 | 09 | [✓][092015] |  |  |  |  | [✓][092020] |
 | 10 | [✓][102015] |  |  |  |  | [✓][102020] |
-| 11 | [✓][112015] |  |  |  |  |  |
+| 11 | [✓][112015] |  |  |  |  | [✓][112020] |
 | 12 | [✓][122015] |  |  |  |  |  |
 
 [012015]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2015/day01
@@ -47,6 +46,8 @@
 [082020]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2020/day08
 [092020]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2020/day09
 [102020]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2020/day10
+[112020]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2020/day11
+
 ## To run an exercise ##
 
 From the `src/yearXXXX` folder:
