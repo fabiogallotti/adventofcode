@@ -1,14 +1,15 @@
-def adjacents(data,i,j,length):
-    no = data[i-1][j-1] if i>0 and j >0 else None
-    n = data[i-1][j] if i>0 else None
-    ne = data[i-1][j+1] if i>0 and j<length-1 else None
-    e = data[i][j+1] if j<length-1 else None
-    se = data[i+1][j+1] if i<len(data)-1 and j<length-1 else None
-    s = data[i+1][j] if i<len(data)-1 else None
-    so = data[i+1][j-1] if i<len(data)-1 and j>0 else None
-    o = data[i][j-1] if j>0 else None
+def adjacents(data, i, j, length):
+    no = data[i - 1][j - 1] if i > 0 and j > 0 else None
+    n = data[i - 1][j] if i > 0 else None
+    ne = data[i - 1][j + 1] if i > 0 and j < length - 1 else None
+    e = data[i][j + 1] if j < length - 1 else None
+    se = data[i + 1][j + 1] if i < len(data) - 1 and j < length - 1 else None
+    s = data[i + 1][j] if i < len(data) - 1 else None
+    so = data[i + 1][j - 1] if i < len(data) - 1 and j > 0 else None
+    o = data[i][j - 1] if j > 0 else None
 
     return [no, n, ne, e, se, s, so, o]
+
 
 def apply_rules(data):
     new_data = [["."] * len(elem) for elem in data]
@@ -16,13 +17,14 @@ def apply_rules(data):
     for i in range(len(data)):
         for j in range(len(data[i])):
             if data[i][j] == "L":
-                adj = adjacents(data,i,j,len(data[i]))
+                adj = adjacents(data, i, j, len(data[i]))
                 new_data[i][j] = "#" if adj.count("#") == 0 else "L"
             elif data[i][j] == "#":
-                adj = adjacents(data,i,j,len(data[i]))
+                adj = adjacents(data, i, j, len(data[i]))
                 new_data[i][j] = "L" if adj.count("#") > 3 else "#"
 
     return new_data
+
 
 def part_1(data):
     count = 0
