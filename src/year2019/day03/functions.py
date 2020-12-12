@@ -1,3 +1,9 @@
+try:
+    from functions.functions import manhattan
+except ModuleNotFoundError:
+    from src.functions.functions import manhattan
+
+
 def preprocessing(data):
     points1 = move(data[0])
     points2 = move(data[1])
@@ -28,10 +34,6 @@ def move(data):
 
 def find_intersections(points1, points2):
     return [elem for elem in points1 if elem in points2]
-
-
-def manhattan(intersections):
-    return [abs(x) + abs(y) for (x, y) in intersections]
 
 
 def count_steps(intersections, points1, points2):
