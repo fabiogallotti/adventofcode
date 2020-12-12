@@ -1,11 +1,11 @@
 from functions.read_input import read_input
 from inputs.path import PATH
 
-from .functions import part_1, part_2
+from .functions import solve_problem
 
 data = read_input(f"{PATH}/2020/day11.txt")
 data = [list(elem) for elem in data]
 
-print(f"First part: {part_1(data)}")
+print(f"First part: {solve_problem(1, data)}")
 
-print(f"Second part: {part_2(data)}")
+print(f"Second part: {solve_problem(2, data)}")
