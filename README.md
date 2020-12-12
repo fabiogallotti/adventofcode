@@ -1,9 +1,10 @@
+
+# Advent Of Code Solutions in Python #
+
 [![CircleCI](https://circleci.com/gh/fabiogallotti/adventofcode.svg?style=shield)](https://circleci.com/gh/fabiogallotti/adventofcode)
 [![codecov](https://codecov.io/gh/fabiogallotti/adventofcode/branch/master/graph/badge.svg)](https://codecov.io/gh/fabiogallotti/adventofcode)
 [![Maintainability](https://api.codeclimate.com/v1/badges/5313ca61f9e8394032a6/maintainability)](https://codeclimate.com/github/fabiogallotti/adventofcode/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/5313ca61f9e8394032a6/test_coverage)](https://codeclimate.com/github/fabiogallotti/adventofcode/test_coverage)
-
-# Advent Of Code Solutions in Python
 
 |    | 2015        | 2016        | 2017        | 2018        | 2019        | 2020        |
 | -  | -           | -           | -           | -           | -           | -           |
@@ -18,7 +19,7 @@
 | 09 | [✓][092015] |  |  |  |  | [✓][092020] |
 | 10 | [✓][102015] |  |  |  |  | [✓][102020] |
 | 11 | [✓][112015] |  |  |  |  | [✓][112020] |
-| 12 | [✓][122015] |  |  |  |  |  |
+| 12 | [✓][122015] |  |  |  |  | [✓][122020] |
 
 [012015]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2015/day01
 [022015]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2015/day02
@@ -47,6 +48,7 @@
 [092020]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2020/day09
 [102020]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2020/day10
 [112020]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2020/day11
+[122020]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2020/day12
 
 ## To run an exercise ##
 
