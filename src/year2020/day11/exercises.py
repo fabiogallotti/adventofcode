@@ -4,8 +4,6 @@ from inputs.path import PATH
 from .functions import part_1, part_2
 
 data = read_input(f"{PATH}/2020/day11.txt")
-
-
 data = [list(elem) for elem in data]
 
 print(f"First part: {part_1(data)}")

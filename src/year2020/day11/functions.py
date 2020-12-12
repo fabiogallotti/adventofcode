@@ -1,236 +1,28 @@
-def no_occupied_seats(data, i, j):
-    if (
-        data[i - 1][j - 1] != "#"
-        and data[i - 1][j] != "#"
-        and data[i - 1][j + 1] != "#"
-        and data[i][j - 1] != "#"
-        and data[i][j + 1] != "#"
-        and data[i + 1][j - 1] != "#"
-        and data[i + 1][j] != "#"
-        and data[i + 1][j + 1] != "#"
-    ):
-        return "#"
-    return "L"
+def adjacents(data,i,j,length):
+    no = data[i-1][j-1] if i>0 and j >0 else None
+    n = data[i-1][j] if i>0 else None
+    ne = data[i-1][j+1] if i>0 and j<length-1 else None
+    e = data[i][j+1] if j<length-1 else None
+    se = data[i+1][j+1] if i<len(data)-1 and j<length-1 else None
+    s = data[i+1][j] if i<len(data)-1 else None
+    so = data[i+1][j-1] if i<len(data)-1 and j>0 else None
+    o = data[i][j-1] if j>0 else None
 
-
-def no_occupied_top_row(data, j):
-    if (
-        data[0][j - 1] != "#"
-        and data[0][j + 1] != "#"
-        and data[1][j - 1] != "#"
-        and data[1][j] != "#"
-        and data[1][j + 1] != "#"
-    ):
-        return "#"
-    return "L"
-
-
-def no_occupied_top_left(data):
-    if data[0][1] != "#" and data[1][0] != "#" and data[1][1] != "#":
-        return "#"
-
-
-def no_occupied_top_right(data, j):
-    if data[0][j - 1] != "#" and data[1][j] != "#" and data[1][j - 1] != "#":
-        return "#"
-
-
-def no_occupied_bottom_left(data, i):
-    if data[i][1] != "#" and data[i - 1][0] != "#" and data[i - 1][1] != "#":
-        return "#"
-
-
-def no_occupied_bottom_row(data, i, j):
-    if (
-        data[i][j - 1] != "#"
-        and data[i][j + 1] != "#"
-        and data[i - 1][j - 1] != "#"
-        and data[i - 1][j] != "#"
-        and data[i - 1][j + 1] != "#"
-    ):
-        return "#"
-    return "L"
-
-
-def no_occupied_bottom_right(data, i, j):
-    if data[i][j - 1] != "#" and data[i - 1][j] != "#" and data[i - 1][j - 1] != "#":
-        return "#"
-
-
-def no_occupied_left_column(data, i):
-    if (
-        data[i - 1][0] != "#"
-        and data[i + 1][0] != "#"
-        and data[i - 1][1] != "#"
-        and data[i][1] != "#"
-        and data[i + 1][1] != "#"
-    ):
-        return "#"
-    return "L"
-
-
-def no_occupied_right_column(data, i, j):
-    if (
-        data[i - 1][j] != "#"
-        and data[i + 1][j] != "#"
-        and data[i - 1][j - 1] != "#"
-        and data[i][j - 1] != "#"
-        and data[i + 1][j - 1] != "#"
-    ):
-        return "#"
-    return "L"
-
-
-def how_many_occupied(data, i, j):
-    how_many = 0
-    if data[i - 1][j - 1] == "#":
-        how_many += 1
-    if data[i - 1][j] == "#":
-        how_many += 1
-    if data[i - 1][j + 1] == "#":
-        how_many += 1
-    if data[i][j - 1] == "#":
-        how_many += 1
-    if data[i][j + 1] == "#":
-        how_many += 1
-    if data[i + 1][j - 1] == "#":
-        how_many += 1
-    if data[i + 1][j] == "#":
-        how_many += 1
-    if data[i + 1][j + 1] == "#":
-        how_many += 1
-    return "L" if how_many > 3 else "#"
-
-
-def how_many_occupied_top_row(data, j):
-    how_many = 0
-    if data[0][j - 1] == "#":
-        how_many += 1
-    if data[0][j + 1] == "#":
-        how_many += 1
-    if data[1][j - 1] == "#":
-        how_many += 1
-    if data[1][j] == "#":
-        how_many += 1
-    if data[1][j + 1] == "#":
-        how_many += 1
-    return "L" if how_many > 3 else "#"
-
-
-def how_many_occupied_bottom_row(data, i, j):
-    how_many = 0
-    if data[i][j - 1] == "#":
-        how_many += 1
-    if data[i][j + 1] == "#":
-        how_many += 1
-    if data[i - 1][j - 1] == "#":
-        how_many += 1
-    if data[i - 1][j] == "#":
-        how_many += 1
-    if data[i - 1][j + 1] == "#":
-        how_many += 1
-    return "L" if how_many > 3 else "#"
-
-
-def how_many_occupied_left_column(data, i):
-    how_many = 0
-    if data[i - 1][0] == "#":
-        how_many += 1
-    if data[i + 1][0] == "#":
-        how_many += 1
-    if data[i - 1][1] == "#":
-        how_many += 1
-    if data[i][1] == "#":
-        how_many += 1
-    if data[i + 1][1] == "#":
-        how_many += 1
-    return "L" if how_many > 3 else "#"
-
-
-def how_many_occupied_right_column(data, i, j):
-    how_many = 0
-    if data[i - 1][j] == "#":
-        how_many += 1
-    if data[i + 1][j] == "#":
-        how_many += 1
-    if data[i - 1][j - 1] == "#":
-        how_many += 1
-    if data[i][j - 1] == "#":
-        how_many += 1
-    if data[i + 1][j - 1] == "#":
-        how_many += 1
-    return "L" if how_many > 3 else "#"
-
-
-def check_top_row(data, new_data, i, j, length):
-    if j == 0:
-        if data[i][j] == "L":
-            new_data[i][j] = no_occupied_top_left(data)
-        elif data[i][j] == "#":
-            new_data[i][j] = "#"
-    elif j in range(1, length - 1):
-        if data[i][j] == "L":
-            new_data[i][j] = no_occupied_top_row(data, j)
-        elif data[i][j] == "#":
-            new_data[i][j] = how_many_occupied_top_row(data, j)
-    elif j == length - 1:
-        if data[i][j] == "L":
-            new_data[i][j] = no_occupied_top_right(data, j)
-        elif data[i][j] == "#":
-            new_data[i][j] = "#"
-
-
-def check_central(data, new_data, i, j, length):
-    if j == 0:
-        if data[i][j] == "L":
-            new_data[i][j] = no_occupied_left_column(data, i)
-        elif data[i][j] == "#":
-            new_data[i][j] = how_many_occupied_left_column(data, i)
-    elif j in range(1, length - 1):
-        if data[i][j] == "L":
-            new_data[i][j] = no_occupied_seats(data, i, j)
-        elif data[i][j] == "#":
-            new_data[i][j] = how_many_occupied(data, i, j)
-    elif j == length - 1:
-        if data[i][j] == "L":
-            new_data[i][j] = no_occupied_right_column(data, i, j)
-        elif data[i][j] == "#":
-            new_data[i][j] = how_many_occupied_right_column(data, i, j)
-
-
-def check_bottom_row(data, new_data, i, j, length):
-    if j == 0:
-        if data[i][j] == "L":
-            new_data[i][j] = no_occupied_bottom_left(data, i)
-        elif data[i][j] == "#":
-            new_data[i][j] = "#"
-    elif j in range(1, length - 1):
-        if data[i][j] == "L":
-            new_data[i][j] = no_occupied_bottom_row(data, i, j)
-        elif data[i][j] == "#":
-            new_data[i][j] = how_many_occupied_bottom_row(data, i, j)
-    elif j == length - 1:
-        if data[i][j] == "L":
-            new_data[i][j] = no_occupied_bottom_right(data, i, j)
-        elif data[i][j] == "#":
-            new_data[i][j] = "#"
-
+    return [no, n, ne, e, se, s, so, o]
 
 def apply_rules(data):
     new_data = [["."] * len(elem) for elem in data]
 
     for i in range(len(data)):
-        length = len(data[i])
-        for j in range(length):
-            if i == 0:
-                check_top_row(data, new_data, i, j, length)
-            elif i in range(1, len(data) - 1):
-                check_central(data, new_data, i, j, length)
-            elif i == len(data) - 1:
-                check_bottom_row(data, new_data, i, j, length)
+        for j in range(len(data[i])):
+            if data[i][j] == "L":
+                adj = adjacents(data,i,j,len(data[i]))
+                new_data[i][j] = "#" if adj.count("#") == 0 else "L"
+            elif data[i][j] == "#":
+                adj = adjacents(data,i,j,len(data[i]))
+                new_data[i][j] = "L" if adj.count("#") > 3 else "#"
 
     return new_data
-
 
 def part_1(data):
     count = 0
