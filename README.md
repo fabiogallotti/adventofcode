@@ -21,6 +21,7 @@
 | 11 | [✓][112015] |  |  |  |  | [✓][112020] |
 | 12 | [✓][122015] |  |  |  |  | [✓][122020] |
 | 13 |  |  |  |  |  | [✓][132020] |
+| 14 |  |  |  |  |  | [✓][142020] |
 
 [012015]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2015/day01
 [022015]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2015/day02
@@ -51,6 +52,7 @@
 [112020]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2020/day11
 [122020]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2020/day12
 [132020]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2020/day13
+[142020]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2020/day14
 
 ## To run an exercise ##
 
