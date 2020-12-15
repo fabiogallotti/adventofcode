@@ -1,3 +1,7 @@
+SIGN_NS = {"n": 1, "s": -1, "o": 0, "e": 0}
+SIGN_OE = {"o": 1, "e": -1, "n": 0, "s": 0}
+
+
 def check_not_empty(elem):
     return elem in ("#", "L")
 
@@ -10,139 +14,40 @@ def problem2_and_empty(problem, elem):
     return problem == 2 and elem == "."
 
 
-def check_occupied_no(problem, data, i, j):
-    if i <= 0 or j <= 0:
+def validate_borders(data, i, j, length, ns, oe):
+    return (0 <= i - SIGN_NS[ns] <= len(data) - 1) and (
+        0 <= j - SIGN_OE[oe] <= length - 1
+    )
+
+
+def check_occupied(problem, data, i, j, length, ns, oe):
+
+    if not validate_borders(data, i, j, length, ns, oe):
         return None
-    elem = data[i - 1][j - 1]
+
+    elem = data[i - SIGN_NS[ns]][j - SIGN_OE[oe]]
+
     if problem1_or_occupied(problem, elem):
         return elem
     elif problem2_and_empty(problem, elem):
-        while i > 0 and j > 0:
-            if check_not_empty(data[i - 1][j - 1]):
-                return data[i - 1][j - 1]
-            i -= 1
-            j -= 1
-    else:
-        return "L"
-
-
-def check_occupied_n(problem, data, i, j):
-    if i <= 0:
-        return None
-    elem = data[i - 1][j]
-    if problem1_or_occupied(problem, elem):
-        return elem
-    elif problem2_and_empty(problem, elem):
-        while i > 0:
-            if check_not_empty(data[i - 1][j]):
-                return data[i - 1][j]
-            i -= 1
-    else:
-        return "L"
-
-
-def check_occupied_ne(problem, data, i, j, length):
-    if i <= 0 or j >= length - 1:
-        return None
-    elem = data[i - 1][j + 1]
-    if problem1_or_occupied(problem, elem):
-        return elem
-    elif problem2_and_empty(problem, elem):
-        while i > 0 and j < length - 1:
-            if check_not_empty(data[i - 1][j + 1]):
-                return data[i - 1][j + 1]
-            i -= 1
-            j += 1
-    else:
-        return "L"
-
-
-def check_occupied_e(problem, data, i, j, length):
-    if j >= length - 1:
-        return None
-    elem = data[i][j + 1]
-    if problem1_or_occupied(problem, elem):
-        return elem
-    elif problem2_and_empty(problem, elem):
-        while j < length - 1:
-            if check_not_empty(data[i][j + 1]):
-                return data[i][j + 1]
-            j += 1
-    else:
-        return "L"
-
-
-def check_occupied_se(problem, data, i, j, length):
-    if i >= len(data) - 1 or j >= length - 1:
-        return None
-    elem = data[i + 1][j + 1]
-    if problem1_or_occupied(problem, elem):
-        return elem
-    elif problem2_and_empty(problem, elem):
-        while i < len(data) - 1 and j < length - 1:
-            if check_not_empty(data[i + 1][j + 1]):
-                return data[i + 1][j + 1]
-            i += 1
-            j += 1
-    else:
-        return "L"
-
-
-def check_occupied_s(problem, data, i, j):
-    if i >= len(data) - 1:
-        return None
-    elem = data[i + 1][j]
-    if problem1_or_occupied(problem, elem):
-        return elem
-    elif problem2_and_empty(problem, elem):
-        while i < len(data) - 1:
-            if check_not_empty(data[i + 1][j]):
-                return data[i + 1][j]
-            i += 1
-    else:
-        return "L"
-
-
-def check_occupied_so(problem, data, i, j):
-    if i >= len(data) - 1 or j <= 0:
-        return None
-    elem = data[i + 1][j - 1]
-    if problem1_or_occupied(problem, elem):
-        return elem
-    elif problem2_and_empty(problem, elem):
-        while i < len(data) - 1 and j > 0:
-            if check_not_empty(data[i + 1][j - 1]):
-                return data[i + 1][j - 1]
-            i += 1
-            j -= 1
-    else:
-        return "L"
-
-
-def check_occupied_o(problem, data, i, j):
-    if j <= 0:
-        return None
-    elem = data[i][j - 1]
-    if problem1_or_occupied(problem, elem):
-        return elem
-    elif problem2_and_empty(problem, elem):
-        while j > 0:
-            if check_not_empty(data[i][j - 1]):
-                return data[i][j - 1]
-            j -= 1
+        while validate_borders(data, i, j, length, ns, oe):
+            if check_not_empty(data[i - SIGN_NS[ns]][j - SIGN_OE[oe]]):
+                return data[i - SIGN_NS[ns]][j - SIGN_OE[oe]]
+            i -= SIGN_NS[ns]
+            j -= SIGN_OE[oe]
     else:
         return "L"
 
 
 def adjacents(problem, data, i, j, length):
-    no = check_occupied_no(problem, data, i, j)
-    n = check_occupied_n(problem, data, i, j)
-    ne = check_occupied_ne(problem, data, i, j, length)
-    e = check_occupied_e(problem, data, i, j, length)
-    se = check_occupied_se(problem, data, i, j, length)
-    s = check_occupied_s(problem, data, i, j)
-    so = check_occupied_so(problem, data, i, j)
-    o = check_occupied_o(problem, data, i, j)
+    no = check_occupied(problem, data, i, j, length, "n", "o")
+    n = check_occupied(problem, data, i, j, length, "n", "n")
+    ne = check_occupied(problem, data, i, j, length, "n", "e")
+    e = check_occupied(problem, data, i, j, length, "e", "e")
+    se = check_occupied(problem, data, i, j, length, "s", "e")
+    s = check_occupied(problem, data, i, j, length, "s", "s")
+    so = check_occupied(problem, data, i, j, length, "s", "o")
+    o = check_occupied(problem, data, i, j, length, "o", "o")
 
     return [no, n, ne, e, se, s, so, o]
 
