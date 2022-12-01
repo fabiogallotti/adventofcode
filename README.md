@@ -6,9 +6,9 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/5313ca61f9e8394032a6/maintainability)](https://codeclimate.com/github/fabiogallotti/adventofcode/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/5313ca61f9e8394032a6/test_coverage)](https://codeclimate.com/github/fabiogallotti/adventofcode/test_coverage)
 
-|    | 2015        | 2016        | 2017        | 2018        | 2019        | 2020        | 2021        |
-| -  | -           | -           | -           | -           | -           | -           | -           |
-| 01 | [✓][012015] |  |  |  | [✓][012019] | [✓][012020] | [✓][012021] |
+|    | 2015        | 2016        | 2017        | 2018        | 2019        | 2020        | 2021        | 2022        |
+| -  | -           | -           | -           | -           | -           | -           | -           | -           |
+| 01 | [✓][012015] |  |  |  | [✓][012019] | [✓][012020] | [✓][012021] | [✓][012022] |
 | 02 | [✓][022015] |  |  |  | [✓][022019] | [✓][022020] | [✓][022021] |
 | 03 | [✓][032015] |  |  |  | [✓][032019] | [✓][032020] |
 | 04 | [✓][042015] |  |  |  | [✓][042019] | [✓][042020] |
@@ -57,9 +57,10 @@
 [152020]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2020/day15
 [012021]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2021/day01
 [022021]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2021/day02
+[012022]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2022/day01
 
 ## To run an exercise ##
 
-From the `src/yearXXXX` folder:
+From the `src` folder:
 
 `python -m <yearXXXX>.<dayYY>.exercises`
