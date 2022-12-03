@@ -47,4 +47,4 @@ def find_distinct_ways(data):
                 i += 1
         i += 1
 
-    return 7**four_consecutive * 4**three_consecutive * 2**two_consecutive
+    return 7 ** four_consecutive * 4 ** three_consecutive * 2 ** two_consecutive
