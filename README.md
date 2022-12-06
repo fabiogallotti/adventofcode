@@ -11,7 +11,7 @@
 | 01 | [✓][012015] |  |  |  | [✓][012019] | [✓][012020] | [✓][012021] | [✓][012022] |
 | 02 | [✓][022015] |  |  |  | [✓][022019] | [✓][022020] | [✓][022021] | [✓][022022]
 | 03 | [✓][032015] |  |  |  | [✓][032019] | [✓][032020] | [✓][032021] | [✓][032022]
-| 04 | [✓][042015] |  |  |  | [✓][042019] | [✓][042020] |  | [✓][042022]
+| 04 | [✓][042015] |  |  |  | [✓][042019] | [✓][042020] | [✓][042021] | [✓][042022]
 | 05 | [✓][052015] |  |  |  |  | [✓][052020] |  | [✓][052022]
 | 06 | [✓][062015] |  |  |  |  | [✓][062020] |  | [✓][062022]
 | 07 | [✓][072015] |  |  |  |  | [✓][072020] |  | [✓][072022]
@@ -58,6 +58,7 @@
 [012021]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2021/day01
 [022021]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2021/day02
 [032021]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2021/day03
+[042021]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2021/day04
 [012022]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2022/day01
 [022022]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2022/day02
 [032022]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2022/day03

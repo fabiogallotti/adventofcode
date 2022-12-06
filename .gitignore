@@ -105,4 +105,8 @@ venv.bak/
 
 .vscode
 
-src/inputs
+src/inputs/2015
+src/inputs/2019
+src/inputs/2020
+src/inputs/2021
+src/inputs/2022
