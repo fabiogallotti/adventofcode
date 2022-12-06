@@ -13,7 +13,7 @@
 | 03 | [✓][032015] |  |  |  | [✓][032019] | [✓][032020] |  | [✓][032022]
 | 04 | [✓][042015] |  |  |  | [✓][042019] | [✓][042020] |  | [✓][042022]
 | 05 | [✓][052015] |  |  |  |  | [✓][052020] |  | [✓][052022]
-| 06 | [✓][062015] |  |  |  |  | [✓][062020] |
+| 06 | [✓][062015] |  |  |  |  | [✓][062020] |  | [✓][062022]
 | 07 | [✓][072015] |  |  |  |  | [✓][072020] |
 | 08 | [✓][082015] |  |  |  |  | [✓][082020] |
 | 09 | [✓][092015] |  |  |  |  | [✓][092020] |
@@ -62,9 +62,18 @@
 [032022]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2022/day03
 [042022]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2022/day04
 [052022]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2022/day05
+[062022]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2022/day06
 
 ## To run an exercise ##
+
+Start the docker environment:
+
+`make run-docker`
 
 From the `src` folder:
 
 `python -m <yearXXXX>.<dayYY>.exercises`
+
+To run the test, from the root folder:
+
+`make test`
