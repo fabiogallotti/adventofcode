@@ -14,8 +14,8 @@
 | 04 | [✓][042015] |  |  |  | [✓][042019] | [✓][042020] |  | [✓][042022]
 | 05 | [✓][052015] |  |  |  |  | [✓][052020] |  | [✓][052022]
 | 06 | [✓][062015] |  |  |  |  | [✓][062020] |  | [✓][062022]
-| 07 | [✓][072015] |  |  |  |  | [✓][072020] |
-| 08 | [✓][082015] |  |  |  |  | [✓][082020] |
+| 07 | [✓][072015] |  |  |  |  | [✓][072020] |  | [✓][072022]
+| 08 | [✓][082015] |  |  |  |  | [✓][082020] |  | [✓][082022]
 | 09 | [✓][092015] |  |  |  |  | [✓][092020] |
 | 10 | [✓][102015] |  |  |  |  | [✓][102020] |
 | 11 | [✓][112015] |  |  |  |  | [✓][112020] |
@@ -64,6 +64,8 @@
 [042022]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2022/day04
 [052022]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2022/day05
 [062022]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2022/day06
+[072022]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2022/day07
+[082022]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2022/day08
 
 ## To run an exercise ##
 
