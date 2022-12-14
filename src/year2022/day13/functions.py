@@ -1,5 +1,3 @@
-import json
-
 CONTINUE = 2
 
 
