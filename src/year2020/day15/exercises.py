@@ -1,7 +1,7 @@
 from functions.read_input import read_input
 from inputs.path import PATH
 
-# from .functions import solve_problem
+from .functions import game
 
 data = read_input(f"{PATH}/2020/day15.txt")
 data = data[0].split(",")
