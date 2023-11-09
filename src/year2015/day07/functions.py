@@ -20,11 +20,10 @@ def assign_values(wires, wire, instruction, operation):
 
 
 def check_int(elem):
-    return type(elem) == int
+    return isinstance(elem, int)
 
 
 def check_operations(wires, wire, instruction, operation):
-
     operators = {
         "AND": operator.and_,
         "OR": operator.or_,

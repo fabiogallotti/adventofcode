@@ -26,7 +26,6 @@ def calculate_difference(data):
 
 
 def find_distinct_ways(data):
-
     diff = calculate_difference(data)
 
     two_consecutive = 0
@@ -47,4 +46,4 @@ def find_distinct_ways(data):
                 i += 1
         i += 1
 
-    return 7 ** four_consecutive * 4 ** three_consecutive * 2 ** two_consecutive
+    return 7**four_consecutive * 4**three_consecutive * 2**two_consecutive

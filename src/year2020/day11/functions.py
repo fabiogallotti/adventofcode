@@ -21,7 +21,6 @@ def validate_borders(data, i, j, length, ns, oe):
 
 
 def check_occupied(problem, data, i, j, length, ns, oe):
-
     if not validate_borders(data, i, j, length, ns, oe):
         return None
 
