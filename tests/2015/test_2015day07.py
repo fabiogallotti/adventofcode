@@ -2,7 +2,6 @@ from src.year2015.day07.functions import emulate_circuit, preprocessing
 
 
 def test_emulate_circuit():
-
     wires = {
         "x": 123,
         "y": 456,
@@ -44,7 +43,6 @@ def test_emulate_circuit():
 
 
 def test_emulate_circuit2():
-
     wires = {
         "a": ["x"],
         "b": ["2", "AND", "j"],

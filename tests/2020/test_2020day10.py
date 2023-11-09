@@ -2,7 +2,6 @@ from src.year2020.day10.functions import find_differences_one_three, find_distin
 
 
 def test_find_differences_one_three():
-
     data = [16, 10, 15, 5, 1, 11, 7, 19, 6, 12, 4]
 
     assert find_differences_one_three(data) == 35

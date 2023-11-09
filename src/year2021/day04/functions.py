@@ -26,7 +26,6 @@ def find_first_winning(numbers_drawn, cards):
     n = 5
     for number in numbers_drawn:
         for number_card, card in cards.items():
-
             for i, j in itertools.product(range(n), range(n)):
                 if number == card[i][j]:
                     card[i][j] = "X"
@@ -71,7 +70,6 @@ def find_last_winning(numbers_drawn, cards):
     n = 5
     for number in numbers_drawn:
         for number_card, card in cards.items():
-
             for i, j in itertools.product(range(n), range(n)):
                 if number == card[i][j]:
                     card[i][j] = "X"

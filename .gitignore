@@ -110,3 +110,5 @@ src/inputs/2019
 src/inputs/2020
 src/inputs/2021
 src/inputs/2022
+
+.ruff_cache

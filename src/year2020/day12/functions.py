@@ -104,7 +104,6 @@ def rotate_waypoint(xw, yw, x, y, elem):
 def move_waypoint(data):
     xw, yw = 10, 1
     x, y = 0, 0
-    direction = "east"
     for elem in data:
         if elem[0] == "N":
             yw = move_north(yw, elem)
