@@ -6,13 +6,19 @@ SHELL = bash
 help: ## show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
+.PHONY: install
+install: ## install dependencies
+	poetry install --with dev
+	poetry run pre-commit install
+
 .PHONY: lint
 lint: ## lint code
-	black .
+	poetry run black .
+	poetry run ruff check .
 
 .PHONY: test
 test: ## run all tests
-	python -m pytest
+	poetry run pytest -vv -s
 
 .PHONY: run-docker
 run-docker:

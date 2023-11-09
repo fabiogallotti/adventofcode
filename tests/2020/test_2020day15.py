@@ -2,7 +2,6 @@ from src.year2020.day15.functions import game
 
 
 def test_game():
-
     assert game([0, 3, 6], 2020) == 436
     assert game([1, 3, 2], 2020) == 1
     assert game([2, 1, 3], 2020) == 10

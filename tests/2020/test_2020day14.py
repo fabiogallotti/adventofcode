@@ -13,7 +13,6 @@ def test_solve_problem_1():
 
 
 def test_solve_problem_2():
-
     data = [
         "mask = 000000000000000000000000000000X1001X",
         "mem[42] = 100",

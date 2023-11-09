@@ -13,9 +13,7 @@ def remove_double_quotes(elem):
 def memory_representation_length(data):
     memory_length = 0
     for elem in data:
-
         if len(elem) > 2:
-
             memory_elem = remove_double_quotes(elem)
 
             i = 1
