@@ -36,7 +36,4 @@ def test_product_of_multiple_slopes():
         "#...##....#",
         ".#..#...#.#",
     ]
-    assert (
-        product_of_multiple_slopes(data, [(1, 1), (3, 1), (5, 1), (7, 1), (1, 2)])
-        == 336
-    )
+    assert product_of_multiple_slopes(data, [(1, 1), (3, 1), (5, 1), (7, 1), (1, 2)]) == 336

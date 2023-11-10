@@ -33,13 +33,9 @@ def check_operations(wires, wire, instruction, operation):
 
     try:
         if instruction[0].isnumeric() and check_int(wires[instruction[2]]):
-            wires[wire] = operators[operation](
-                int(instruction[0]), int(wires[instruction[2]])
-            )
+            wires[wire] = operators[operation](int(instruction[0]), int(wires[instruction[2]]))
         elif check_int(wires[instruction[0]]) and instruction[2].isnumeric():
-            wires[wire] = operators[operation](
-                int(wires[instruction[0]]), int(instruction[2])
-            )
+            wires[wire] = operators[operation](int(wires[instruction[0]]), int(instruction[2]))
         elif check_int(wires[instruction[0]]) and check_int(wires[instruction[2]]):
             wires[wire] = operators[operation](
                 int(wires[instruction[0]]), int(wires[instruction[2]])

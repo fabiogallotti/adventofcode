@@ -34,7 +34,4 @@ def test_santa_delivers():
 def test_santa_and_robo_delivers():
     assert santa_and_robo_delivers(["^", "v"]) == 3
     assert santa_and_robo_delivers(["^", ">", "v", "<"]) == 3
-    assert (
-        santa_and_robo_delivers(["^", "v", "^", "v", "^", "v", "^", "v", "^", "v"])
-        == 11
-    )
+    assert santa_and_robo_delivers(["^", "v", "^", "v", "^", "v", "^", "v", "^", "v"]) == 11

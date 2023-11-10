@@ -70,9 +70,7 @@ def part_1(data):
     return find_max_flow(valves, start_valve, visited, start_time, start_rate)
 
 
-def find_max_flow_part2(
-    valves, my_v_id, my_time, el_v_id, el_time, visited, time, rate
-):
+def find_max_flow_part2(valves, my_v_id, my_time, el_v_id, el_time, visited, time, rate):
     if time == 26:
         return 0
     if my_time > 0 and el_time > 0:

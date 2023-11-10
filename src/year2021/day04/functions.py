@@ -30,24 +30,10 @@ def find_first_winning(numbers_drawn, cards):
                 if number == card[i][j]:
                     card[i][j] = "X"
 
-                if (
-                    card[i][0]
-                    == card[i][1]
-                    == card[i][2]
-                    == card[i][3]
-                    == card[i][4]
-                    == "X"
-                ):
+                if card[i][0] == card[i][1] == card[i][2] == card[i][3] == card[i][4] == "X":
                     return number, number_card
 
-                if (
-                    card[0][j]
-                    == card[1][j]
-                    == card[2][j]
-                    == card[3][j]
-                    == card[4][j]
-                    == "X"
-                ):
+                if card[0][j] == card[1][j] == card[2][j] == card[3][j] == card[4][j] == "X":
                     return number, number_card
 
 
@@ -74,24 +60,10 @@ def find_last_winning(numbers_drawn, cards):
                 if number == card[i][j]:
                     card[i][j] = "X"
 
-                if (
-                    card[i][0]
-                    == card[i][1]
-                    == card[i][2]
-                    == card[i][3]
-                    == card[i][4]
-                    == "X"
-                ):
+                if card[i][0] == card[i][1] == card[i][2] == card[i][3] == card[i][4] == "X":
                     winning_cards.add(number_card)
 
-                if (
-                    card[0][j]
-                    == card[1][j]
-                    == card[2][j]
-                    == card[3][j]
-                    == card[4][j]
-                    == "X"
-                ):
+                if card[0][j] == card[1][j] == card[2][j] == card[3][j] == card[4][j] == "X":
                     winning_cards.add(number_card)
 
             remaining_cards = all_cards_numbers - winning_cards

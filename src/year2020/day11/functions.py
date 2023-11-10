@@ -15,9 +15,7 @@ def problem2_and_empty(problem, elem):
 
 
 def validate_borders(data, i, j, length, ns, oe):
-    return (0 <= i - SIGN_NS[ns] <= len(data) - 1) and (
-        0 <= j - SIGN_OE[oe] <= length - 1
-    )
+    return (0 <= i - SIGN_NS[ns] <= len(data) - 1) and (0 <= j - SIGN_OE[oe] <= length - 1)
 
 
 def check_occupied(problem, data, i, j, length, ns, oe):

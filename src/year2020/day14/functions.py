@@ -34,9 +34,7 @@ def get_infos(problem, elem):
     e = elem.find("=")
     value = elem[e + 2 :]
     binary_repr = (
-        list(get_bin(int(value), 36))
-        if problem == 1
-        else list(get_bin(int(memory_position), 36))
+        list(get_bin(int(value), 36)) if problem == 1 else list(get_bin(int(memory_position), 36))
     )
 
     return memory_position, value, binary_repr
@@ -48,12 +46,8 @@ def apply_mask(binary_repr, bits_to_change):
 
 
 def change_all_x_values(binary_repr, bits_to_change, memory, value):
-    possible_x_values = [
-        p for p in itertools.product("01", repeat=binary_repr.count("X"))
-    ]
-    x_to_change = [
-        position for position, value in bits_to_change.items() if value == "X"
-    ]
+    possible_x_values = [p for p in itertools.product("01", repeat=binary_repr.count("X"))]
+    x_to_change = [position for position, value in bits_to_change.items() if value == "X"]
 
     for x_values in possible_x_values:
         binary_repr = list(binary_repr)

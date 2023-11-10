@@ -25,9 +25,7 @@ def part_2(data):
     len_groups = 3
     num_groups = len(data) // len_groups
 
-    groups = [
-        data[i * len_groups : (i * len_groups) + len_groups] for i in range(num_groups)
-    ]
+    groups = [data[i * len_groups : (i * len_groups) + len_groups] for i in range(num_groups)]
 
     for group in groups:
         first = set(group[0])

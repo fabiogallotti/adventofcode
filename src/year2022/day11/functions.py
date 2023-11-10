@@ -73,11 +73,7 @@ def part_1(data):
 def part_2(data):
     monkeys = preprocessing(data)
     divisors = [monkey["test"][0] for monkey in monkeys.values()]
-    ops = [
-        int(monkey["ope"][1])
-        for monkey in monkeys.values()
-        if monkey["ope"][1] != "old"
-    ]
+    ops = [int(monkey["ope"][1]) for monkey in monkeys.values() if monkey["ope"][1] != "old"]
 
     lcm = math.lcm(*divisors, *ops)
 

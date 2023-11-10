@@ -16,9 +16,7 @@ def preprocessing(data):
 
 
 def max_distance(distances):
-    return sum(
-        value2 for key, value in distances.items() for key2, value2 in value.items()
-    )
+    return sum(value2 for key, value in distances.items() for key2, value2 in value.items())
 
 
 def sum_distance_path(path, distances):

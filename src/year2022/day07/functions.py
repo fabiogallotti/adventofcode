@@ -35,9 +35,7 @@ def preprocessing(data):
                 current_dir = dirs[e[2]]
             else:
                 full_name = f"{current_dir.name}/{e[2]}"
-                dirs[full_name] = Dir(
-                    name=full_name, parent=current_dir.name, dirs=[], files=[]
-                )
+                dirs[full_name] = Dir(name=full_name, parent=current_dir.name, dirs=[], files=[])
                 current_dir.dirs.append(dirs[full_name])
                 current_dir = dirs[full_name]
 
@@ -51,9 +49,7 @@ def preprocessing(data):
 
 def part_1(data):
     dirs = preprocessing(data)
-    return sum(
-        d.get_total_size() for d in dirs.values() if d.get_total_size() <= 100000
-    )
+    return sum(d.get_total_size() for d in dirs.values() if d.get_total_size() <= 100000)
 
 
 def part_2(data):
@@ -61,8 +57,6 @@ def part_2(data):
 
     total = dirs["/"].get_total_size()
     min_size = abs(70000000 - 30000000 - total)
-    candidates = [
-        d.get_total_size() for d in dirs.values() if d.get_total_size() > min_size
-    ]
+    candidates = [d.get_total_size() for d in dirs.values() if d.get_total_size() > min_size]
 
     return min(candidates)
