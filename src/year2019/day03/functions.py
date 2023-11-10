@@ -37,9 +37,7 @@ def find_intersections(points1, points2):
 
 
 def count_steps(intersections, points1, points2):
-    return [
-        (points1.index(elem) + 1, points2.index(elem) + 1) for elem in intersections
-    ]
+    return [(points1.index(elem) + 1, points2.index(elem) + 1) for elem in intersections]
 
 
 def solve_problem(problem, intersections, points1=None, points2=None):

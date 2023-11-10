@@ -5,9 +5,7 @@ def preprocessing(data):
 
         bags = rules[0].replace("bags", "").strip().replace(" ", "_")
         contains = rules[1].split(",")
-        contains = [
-            x.replace("bags", "").replace("bag", "").strip(" .") for x in contains
-        ]
+        contains = [x.replace("bags", "").replace("bag", "").strip(" .") for x in contains]
         numbers = [int(x[0]) for x in contains if x[0].isnumeric()]
         contains = [x[2:].replace(" ", "_") for x in contains]
 
@@ -30,6 +28,4 @@ def number_containing_bags(bags_to_find, rules):
 
 
 def bag_size(bag_name, rules):
-    return sum(
-        value + value * bag_size(bag, rules) for bag, value in rules[bag_name].items()
-    )
+    return sum(value + value * bag_size(bag, rules) for bag, value in rules[bag_name].items())

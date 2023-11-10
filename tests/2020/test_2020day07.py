@@ -2,9 +2,9 @@ from src.year2020.day07.functions import bag_size, number_containing_bags, prepr
 
 
 def test_preprocessing():
-    assert preprocessing(
-        ["light red bags contain 1 bright white bag, 2 muted yellow bags."]
-    ) == {"light_red": {"bright_white": 1, "muted_yellow": 2}}
+    assert preprocessing(["light red bags contain 1 bright white bag, 2 muted yellow bags."]) == {
+        "light_red": {"bright_white": 1, "muted_yellow": 2}
+    }
 
 
 def test_number_containing_bags():

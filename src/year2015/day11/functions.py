@@ -29,8 +29,7 @@ def next_word(data):
 
 def check_increasing_straight(data):
     return any(
-        ord(data[i]) + 1 == ord(data[i + 1])
-        and ord(data[i + 1]) + 1 == ord(data[i + 2])
+        ord(data[i]) + 1 == ord(data[i + 1]) and ord(data[i + 1]) + 1 == ord(data[i + 2])
         for i in range(len(data) - 2)
     )
 

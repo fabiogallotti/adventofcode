@@ -29,9 +29,7 @@ def solve_problem(data, problem):
         minimum, maximum, letter, password = preprocessing(elem)
 
         if problem == 1:
-            counter = occurences_between_min_max(
-                minimum, maximum, letter, password, counter
-            )
+            counter = occurences_between_min_max(minimum, maximum, letter, password, counter)
         elif problem == 2:
             counter = check_positions(minimum, maximum, letter, password, counter)
 

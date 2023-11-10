@@ -37,8 +37,5 @@ def solve_problem(problem, forms, how_many=None):
         return sum(len(elem) for elem in forms)
     elif problem == 2:
         return sum(
-            1
-            for i, elem in enumerate(forms)
-            for value in elem.values()
-            if value == how_many[i]
+            1 for i, elem in enumerate(forms) for value in elem.values() if value == how_many[i]
         )
