@@ -105,10 +105,6 @@ venv.bak/
 
 .vscode
 
-src/inputs/2015
-src/inputs/2019
-src/inputs/2020
-src/inputs/2021
-src/inputs/2022
+src/inputs/*
 
 .ruff_cache
