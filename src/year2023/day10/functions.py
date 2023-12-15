@@ -100,4 +100,55 @@ def evaluate_neighbors(point, data, visited_points):
 
 
 def part_2(data):
-    pass
+    data = [list(row) for row in data]
+
+    visited_points = []
+    for i, row in enumerate(data):
+        for j, value in enumerate(row):
+            if value == "S":
+                s = Point(point="S", x=i, y=j)
+                visited_points.append(s)
+
+    next_point = evaluate_neighbors(s, data, visited_points)
+    while next_point is not None:
+        next_point = evaluate_neighbors(next_point, data, visited_points)
+
+    visited_points.append(s)
+
+    max_column = len(data[0])
+    enclosed = 0
+
+    for i, row in enumerate(data):
+        for j, value in enumerate(row):
+            p = Point(point=data[i][j], x=i, y=j)
+            if p not in visited_points:
+                k = p.y + 1
+                count = 0
+                while k < max_column:
+                    new_p = Point(point=data[i][k], x=i, y=k)
+                    if (
+                        new_p.point
+                        in [
+                            Connections.NS.value,
+                            Connections.SW.value,
+                            Connections.SE.value,
+                        ]
+                        and new_p in visited_points
+                    ):
+                        count += 1
+                    elif new_p.point == "S":
+                        previous_p = visited_points[1]
+                        next_p = visited_points[-2]
+
+                        if abs(next_p.x - previous_p.x) == 2:
+                            count += 1
+                        elif (
+                            abs(next_p.x - previous_p.x) == 1 and abs(next_p.y - previous_p.y) == 1
+                        ):
+                            count += 1
+
+                    k += 1
+
+                if count % 2 != 0:
+                    enclosed += 1
+    return enclosed
