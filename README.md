@@ -19,11 +19,11 @@
 | 09 | [✓][092015] |             |             |             |             | [✓][092020] |             | [✓][092022] | [✓][092023] |
 | 10 | [✓][102015] |             |             |             |             | [✓][102020] |             | [✓][102022] | [✓][102023] |
 | 11 | [✓][112015] |             |             |             |             | [✓][112020] |             | [✓][112022] | [✓][112023] |
-| 12 | [✓][122015] |             |             |             |             | [✓][122020] |             | [✓][122022] |             |
+| 12 | [✓][122015] |             |             |             |             | [✓][122020] |             | [✓][122022] | [✓][122023] |
 | 13 |             |             |             |             |             | [✓][132020] |             | [✓][132022] |             |
 | 14 |             |             |             |             |             | [✓][142020] |             | [✓][142022] |             |
 | 15 |             |             |             |             |             | [✓][152020] |             | [✓][152022] | [✓][152023] |
-| 16 |             |             |             |             |             |             |             | [✓][162022] |             |
+| 16 |             |             |             |             |             |             |             | [✓][162022] | [✓][162023]|
 | 17 |             |             |             |             |             |             |             |             |             |
 | 18 |             |             |             |             |             |             |             |             |             |
 | 19 |             |             |             |             |             |             |             |             |             |
@@ -101,8 +101,10 @@
 [092023]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2023/day09
 [102023]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2023/day10
 [112023]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2023/day11
+[122023]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2023/day12
 
 [152023]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2023/day15
+[162023]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2023/day16
 
 ## To run an exercise ##
 
