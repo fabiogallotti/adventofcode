@@ -21,7 +21,7 @@
 | 11 | [✓][112015] |             |             |             |             | [✓][112020] |             | [✓][112022] | [✓][112023] |
 | 12 | [✓][122015] |             |             |             |             | [✓][122020] |             | [✓][122022] | [✓][122023] |
 | 13 |             |             |             |             |             | [✓][132020] |             | [✓][132022] | [✓][132023] |
-| 14 |             |             |             |             |             | [✓][142020] |             | [✓][142022] |             |
+| 14 |             |             |             |             |             | [✓][142020] |             | [✓][142022] | [✓][142023] |
 | 15 |             |             |             |             |             | [✓][152020] |             | [✓][152022] | [✓][152023] |
 | 16 |             |             |             |             |             |             |             | [✓][162022] | [✓][162023] |
 | 17 |             |             |             |             |             |             |             |             |             |
@@ -103,7 +103,7 @@
 [112023]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2023/day11
 [122023]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2023/day12
 [132023]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2023/day13
-
+[142023]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2023/day14
 [152023]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2023/day15
 [162023]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2023/day16
 
