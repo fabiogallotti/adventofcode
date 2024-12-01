@@ -13,7 +13,8 @@ install: ## install dependencies
 
 .PHONY: lint
 lint: ## lint code
-	pre-commit
+	poetry run ruff check --fix src tests
+	poetry run ruff format src tests
 
 .PHONY: test
 test: ## run all tests

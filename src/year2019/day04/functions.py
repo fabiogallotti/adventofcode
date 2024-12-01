@@ -20,6 +20,6 @@ def check_inside(data, i):
 
 def check_no_larger_group(data):
     return any(
-        i in [1, 4] and check_extremes(data) or i not in [1, 4] and check_inside(data, i)
+        (i in [1, 4] and check_extremes(data)) or (i not in [1, 4] and check_inside(data, i))
         for i in range(1, 5)
     )

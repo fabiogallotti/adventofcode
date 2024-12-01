@@ -1,3 +1,6 @@
+import itertools
+
+
 def preprocessing(data):
     rocks = {}
     for row in data:
@@ -5,7 +8,7 @@ def preprocessing(data):
 
         points = [(int(x[0]), int(x[1])) for x in p]
 
-        for p1, p2 in zip(points, points[1:]):
+        for p1, p2 in itertools.pairwise(points):
             x1, y1 = p1
             x2, y2 = p2
 

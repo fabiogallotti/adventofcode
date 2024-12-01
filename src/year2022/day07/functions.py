@@ -1,5 +1,5 @@
 import contextlib
-from typing import Optional, List
+
 from pydantic import BaseModel
 
 
@@ -10,9 +10,9 @@ class File(BaseModel):
 
 class Dir(BaseModel):
     name: str
-    parent: Optional[str] = None
-    dirs: Optional[List["Dir"]] = None
-    files: Optional[List[File]] = None
+    parent: str | None = None
+    dirs: list["Dir"] | None = None
+    files: list[File] | None = None
 
     def get_total_size(self):
         size = sum(f.size for f in self.files)

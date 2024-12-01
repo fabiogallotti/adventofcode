@@ -1,5 +1,4 @@
 import itertools
-from typing import List
 
 
 def part_1(data):
@@ -25,7 +24,7 @@ def part_1(data):
     return visible
 
 
-def get_viewing_distance(value: int, direction: List[int]):
+def get_viewing_distance(value: int, direction: list[int]):
     view_distance = 0
     for e in direction:
         view_distance += 1
