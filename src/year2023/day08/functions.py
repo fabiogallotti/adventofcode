@@ -1,4 +1,5 @@
 from math import lcm
+
 from pydantic import BaseModel
 
 

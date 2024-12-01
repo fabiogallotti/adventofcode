@@ -1,5 +1,5 @@
 def part_1(data):
-    data = [row.split(",") for row in data][0]
+    data = next(row.split(",") for row in data)
     return sum(hash_algoritm(elem) for elem in data)
 
 
@@ -15,7 +15,7 @@ def hash_algoritm(string):
 def part_2(data):
     boxes = {}
 
-    data = [row.split(",") for row in data][0]
+    data = next(row.split(",") for row in data)
 
     data = [row.strip("-").split("=") for row in data]
 

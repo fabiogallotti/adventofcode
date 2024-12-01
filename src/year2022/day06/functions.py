@@ -1,5 +1,5 @@
 def x_char_different(x, data):
-    for i in range((len(data) - x)):
+    for i in range(len(data) - x):
         chars = set()
         for j in range(i, i + x):
             chars.add(data[j])

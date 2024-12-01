@@ -1,5 +1,6 @@
-from pydantic import BaseModel
 from itertools import combinations
+
+from pydantic import BaseModel
 
 
 class Galaxy(BaseModel):

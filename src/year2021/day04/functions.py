@@ -4,7 +4,7 @@ import itertools
 def preprocessing(data):
     data = [x.split() for x in data]
 
-    numbers_drawn = [n.split(",") for n in data[0]][0]
+    numbers_drawn = next(n.split(",") for n in data[0])
     numbers_drawn = [int(x) for x in numbers_drawn]
 
     list_cards = data[1:]

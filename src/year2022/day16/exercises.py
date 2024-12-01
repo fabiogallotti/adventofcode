@@ -1,5 +1,6 @@
 from functions.read_input import read_input
 from inputs.path import PATH
+
 from .functions import part_1, part_2
 
 data = read_input(f"{PATH}/2022/day16.txt")
