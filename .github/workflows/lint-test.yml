@@ -12,8 +12,8 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  PYTHON_VERSION: 3.11
-  POETRY_VERSION: 1.7.0
+  PYTHON_VERSION: 3.13
+  POETRY_VERSION: 1.8.4
 
 jobs:
   lint-and-test:
@@ -48,11 +48,8 @@ jobs:
       - name: Install project
         run: poetry install --no-interaction
 
-      - name: Verify code formatting (Black)
-        run: make black-check
-
       - name: Enforce code style (Ruff)
-        run: make ruff
+        run: make lint
 
       - name: Run Tests
         run: make test
