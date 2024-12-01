@@ -9,22 +9,11 @@ help: ## show this help
 .PHONY: install
 install: ## install dependencies
 	poetry install --with dev
-	poetry run pre-commit install
-
-.PHONY: black
-black: ## apply code formatting
-	poetry run black src tests
-
-.PHONY: black-check
-black-check: ## apply code formatting
-	poetry run black --check src tests
-
-.PHONY: ruff
-ruff: ## enforce code style
-	poetry run ruff check src tests
+	pre-commit install
 
 .PHONY: lint
-lint: black ruff
+lint: ## lint code
+	pre-commit
 
 .PHONY: test
 test: ## run all tests

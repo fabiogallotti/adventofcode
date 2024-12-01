@@ -4,54 +4,34 @@ version = "0.1.0"
 description = ""
 authors = ["Fabio Gallotti <fabio.gallotti.93@gmail.com>"]
 readme = "README.md"
-packages = [{ include = "src"}]
+packages = [{ include = "src" }]
 
 
 [tool.poetry.dependencies]
-python = "^3.11"
-pydantic = "^2.4.2"
+python = "^3.13"
+pydantic = "^2.10.2"
 
 [tool.poetry.group.dev.dependencies]
-black = "^24.3.0"
-ruff = "^0.1.5"
-pytest = "^7.4.3"
-pre-commit = "^3.5.0"
+ruff = "^0.8.1"
+pre-commit = "^4.0.1"
+pytest = "^8.3.3"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
-[tool.black]
-line-length = 100
-target-version = ["py311"]
-
 [tool.ruff]
-exclude = [
-    ".bzr",
-    ".direnv",
-    ".eggs",
-    ".git",
-    ".git-rewrite",
-    ".hg",
-    ".mypy_cache",
-    ".nox",
-    ".pants.d",
-    ".pytype",
-    ".ruff_cache",
-    ".svn",
-    ".tox",
-    ".venv",
-    "__pypackages__",
-    "_build",
-    "buck-out",
-    "build",
-    "dist",
-    "node_modules",
-    "venv",
-]
+target-version = "py313"
 line-length = 100
-indent-width = 4
-target-version = "py311"
+unsafe-fixes = true
 
 [tool.ruff.lint]
+extend-select = [
+    "UP",  # pyupgrade
+    "I",   # isort
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "RUF", # ruff
+]
+fixable = ["ALL"]
 ignore = ["E712", "E741"] # TODO: remove these two ignores
