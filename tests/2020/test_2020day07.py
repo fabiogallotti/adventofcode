@@ -1,4 +1,4 @@
-from src.year2020.day07.functions import bag_size, number_containing_bags, preprocessing
+from year2020.day07.functions import bag_size, number_containing_bags, preprocessing
 
 
 def test_preprocessing():

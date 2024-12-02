@@ -1,4 +1,4 @@
-from src.year2019.day02.functions import calculate, set_initial_state
+from year2019.day02.functions import calculate, set_initial_state
 
 
 def test_calculate():

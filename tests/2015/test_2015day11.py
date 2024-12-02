@@ -1,4 +1,4 @@
-from src.year2015.day11.functions import (
+from year2015.day11.functions import (
     check_increasing_straight,
     check_iol,
     check_two_pairs,

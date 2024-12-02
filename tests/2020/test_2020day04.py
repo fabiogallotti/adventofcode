@@ -1,4 +1,4 @@
-from src.year2020.day04.functions import (
+from year2020.day04.functions import (
     preprocessing,
     valid_byr,
     valid_ecl,

@@ -1,7 +1,4 @@
-try:
-    from functions.functions import manhattan
-except ModuleNotFoundError:
-    from src.functions.functions import manhattan
+from functions.functions import manhattan
 
 
 def preprocessing(data):

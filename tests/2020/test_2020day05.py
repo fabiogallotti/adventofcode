@@ -1,4 +1,4 @@
-from src.year2020.day05.functions import find_missing_seat_id, find_seat_ids
+from year2020.day05.functions import find_missing_seat_id, find_seat_ids
 
 
 def test_find_seat_ids():

@@ -116,10 +116,10 @@ Start the docker environment:
 
 `make run-docker`
 
-From the `src` folder:
+To run the script for the year XXXX / day YY exercise:
 
 `python -m <yearXXXX>.<dayYY>.exercises`
 
-To run the test, from the root folder:
+To run the tests:
 
 `make test`

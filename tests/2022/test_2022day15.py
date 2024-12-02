@@ -1,4 +1,4 @@
-from src.year2022.day15.functions import part_1, part_2
+from year2022.day15.functions import part_1, part_2
 
 INPUT = [
     "Sensor at x=2, y=18: closest beacon is at x=-2, y=15",

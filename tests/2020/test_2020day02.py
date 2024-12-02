@@ -1,4 +1,4 @@
-from src.year2020.day02.functions import preprocessing, solve_problem
+from year2020.day02.functions import preprocessing, solve_problem
 
 
 def test_preprocessing():

@@ -1,4 +1,4 @@
-from src.year2022.day14.functions import part_1, part_2
+from year2022.day14.functions import part_1, part_2
 
 INPUT = ["498,4 -> 498,6 -> 496,6", "503,4 -> 502,4 -> 502,9 -> 494,9"]
 

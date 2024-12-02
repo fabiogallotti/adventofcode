@@ -1,4 +1,4 @@
-from src.year2015.day01.functions import count_floors, first_basement, up_down
+from year2015.day01.functions import count_floors, first_basement, up_down
 
 
 def test_count_floors():

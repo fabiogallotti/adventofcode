@@ -1,4 +1,4 @@
-from src.year2020.day15.functions import game
+from year2020.day15.functions import game
 
 
 def test_game():

@@ -1,4 +1,4 @@
-from src.year2022.day09.functions import part_1, part_2
+from year2022.day09.functions import part_1, part_2
 
 INPUT1 = [
     ["R", "4"],

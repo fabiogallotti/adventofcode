@@ -1,4 +1,4 @@
-from src.year2022.day10.functions import part_1, part_2
+from year2022.day10.functions import part_1, part_2
 
 INPUT = [
     ["addx", "15"],

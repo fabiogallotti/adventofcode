@@ -1,4 +1,4 @@
-from src.year2022.day07.functions import part_1, part_2
+from year2022.day07.functions import part_1, part_2
 
 INPUT = [
     ["$", "cd", "/"],

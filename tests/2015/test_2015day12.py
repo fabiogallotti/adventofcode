@@ -1,4 +1,4 @@
-from src.year2015.day12.functions import sum_ints, sum_ints_no_red
+from year2015.day12.functions import sum_ints, sum_ints_no_red
 
 
 def test_sum_ints():

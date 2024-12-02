@@ -1,8 +1,4 @@
-from src.year2019.day04.functions import (
-    check_double,
-    check_no_decrease,
-    check_no_larger_group,
-)
+from year2019.day04.functions import check_double, check_no_decrease, check_no_larger_group
 
 
 def test_check_double():

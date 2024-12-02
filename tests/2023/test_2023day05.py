@@ -1,4 +1,4 @@
-from src.year2023.day05.functions import part_1, part_2
+from year2023.day05.functions import part_1, part_2
 
 EXAMPLE = [
     "seeds: 79 14 55 13",
