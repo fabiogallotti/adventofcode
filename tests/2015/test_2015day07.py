@@ -1,4 +1,4 @@
-from src.year2015.day07.functions import emulate_circuit, preprocessing
+from year2015.day07.functions import emulate_circuit, preprocessing
 
 
 def test_emulate_circuit():

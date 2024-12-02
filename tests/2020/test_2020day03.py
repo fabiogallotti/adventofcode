@@ -1,7 +1,4 @@
-from src.year2020.day03.functions import (
-    product_of_multiple_slopes,
-    trees_for_given_slope,
-)
+from year2020.day03.functions import product_of_multiple_slopes, trees_for_given_slope
 
 
 def test_trees_for_given_slope():

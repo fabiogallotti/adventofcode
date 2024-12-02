@@ -1,4 +1,4 @@
-from src.year2020.day09.functions import find_not_sum_preamble, sum_weakness
+from year2020.day09.functions import find_not_sum_preamble, sum_weakness
 
 
 def test_find_not_sum_preamble():

@@ -1,4 +1,4 @@
-from src.year2020.day08.functions import (
+from year2020.day08.functions import (
     calculate_accumulator_value,
     calculate_value_switching_positions,
     find_positions,

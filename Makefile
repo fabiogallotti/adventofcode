@@ -8,17 +8,17 @@ help: ## show this help
 
 .PHONY: install
 install: ## install dependencies
-	poetry install --with dev
+	uv sync --all-extras --dev
 	pre-commit install
 
 .PHONY: lint
 lint: ## lint code
-	poetry run ruff check --fix src tests
-	poetry run ruff format src tests
+	uv run ruff check --fix src tests
+	uv run ruff format src tests
 
 .PHONY: test
 test: ## run all tests
-	poetry run pytest -vv -s
+	uv run pytest -vv -s
 
 .PHONY: run-docker
 run-docker:

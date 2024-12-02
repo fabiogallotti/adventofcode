@@ -1,4 +1,4 @@
-from src.year2022.day01.functions import part_1, part_2
+from year2022.day01.functions import part_1, part_2
 
 CALORIES = [
     "1000",

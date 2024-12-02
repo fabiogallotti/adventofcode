@@ -1,4 +1,4 @@
-from src.year2020.day10.functions import find_differences_one_three, find_distinct_ways
+from year2020.day10.functions import find_differences_one_three, find_distinct_ways
 
 
 def test_find_differences_one_three():

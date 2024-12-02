@@ -1,4 +1,4 @@
-from src.year2020.day01.functions import find_set_of_n_candidates, multiply_elements_set
+from year2020.day01.functions import find_set_of_n_candidates, multiply_elements_set
 
 
 def test_two_elements():

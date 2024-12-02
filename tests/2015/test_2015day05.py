@@ -1,4 +1,4 @@
-from src.year2015.day05.functions import (
+from year2015.day05.functions import (
     contains,
     nice_string_first,
     nice_string_second,

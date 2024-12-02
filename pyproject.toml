@@ -1,24 +1,18 @@
-[tool.poetry]
+[project]
+authors = [{ name = "Fabio Gallotti", email = "fabio.gallotti.93@gmail.com" }]
+requires-python = ">=3.13"
+dependencies = ["pydantic>=2.10.2"]
 name = "adventofcode"
 version = "0.1.0"
 description = ""
-authors = ["Fabio Gallotti <fabio.gallotti.93@gmail.com>"]
 readme = "README.md"
-packages = [{ include = "src" }]
 
-
-[tool.poetry.dependencies]
-python = "^3.13"
-pydantic = "^2.10.2"
-
-[tool.poetry.group.dev.dependencies]
-ruff = "^0.8.1"
-pre-commit = "^4.0.1"
-pytest = "^8.3.3"
+[tool.uv]
+dev-dependencies = ["pre-commit>=4.0.1", "pytest>=8.3.4", "ruff>=0.8.1"]
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
 
 [tool.ruff]
 target-version = "py313"

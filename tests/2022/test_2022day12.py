@@ -1,4 +1,4 @@
-from src.year2022.day12.functions import part_1, part_2
+from year2022.day12.functions import part_1, part_2
 
 INPUT = [
     ["S", "a", "b", "q", "p", "o", "n", "m"],

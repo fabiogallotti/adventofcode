@@ -1,4 +1,4 @@
-from src.functions.read_input import read_input
+from functions.read_input import read_input
 
 PATH = "tests/functions/resources"
 

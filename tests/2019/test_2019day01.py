@@ -1,4 +1,4 @@
-from src.year2019.day01.functions import fuel_computation, fuel_recursive
+from year2019.day01.functions import fuel_computation, fuel_recursive
 
 
 def test_fuel_computation():

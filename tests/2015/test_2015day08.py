@@ -1,4 +1,4 @@
-from src.year2015.day08.functions import (
+from year2015.day08.functions import (
     difference_new_string,
     difference_string_memory,
     memory_representation_length,

@@ -1,4 +1,4 @@
-from src.year2022.day16.functions import part_1, part_2
+from year2022.day16.functions import part_1, part_2
 
 INPUT = [
     "Valve AA has flow rate=0; tunnels lead to valves DD, II, BB",

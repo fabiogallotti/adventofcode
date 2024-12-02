@@ -1,8 +1,4 @@
-from src.year2015.day06.functions import (
-    calculate_brightness,
-    calculate_lights_on,
-    get_points,
-)
+from year2015.day06.functions import calculate_brightness, calculate_lights_on, get_points
 
 
 def test_get_points():

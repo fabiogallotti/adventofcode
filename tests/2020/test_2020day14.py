@@ -1,4 +1,4 @@
-from src.year2020.day14.functions import solve_problem
+from year2020.day14.functions import solve_problem
 
 
 def test_solve_problem_1():

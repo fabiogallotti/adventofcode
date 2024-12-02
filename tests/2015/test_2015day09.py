@@ -1,8 +1,4 @@
-from src.year2015.day09.functions import (
-    longest_path_length,
-    preprocessing,
-    shortest_path_length,
-)
+from year2015.day09.functions import longest_path_length, preprocessing, shortest_path_length
 
 
 def test_preprocessing():

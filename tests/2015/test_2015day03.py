@@ -1,9 +1,4 @@
-from src.year2015.day03.functions import (
-    move,
-    move_and_add,
-    santa_and_robo_delivers,
-    santa_delivers,
-)
+from year2015.day03.functions import move, move_and_add, santa_and_robo_delivers, santa_delivers
 
 
 def test_move():
