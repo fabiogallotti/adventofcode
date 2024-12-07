@@ -100,7 +100,6 @@ def part_2(data):
                 direction = next_direction(direction)
             elif (next_point, direction) in visited:
                 count += 1
-                print(count)
                 break
             else:
                 point = next_point
