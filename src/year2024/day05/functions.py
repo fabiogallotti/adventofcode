@@ -1,4 +1,4 @@
-def prepocessing_rules_pages(data):
+def preprocessing_rules_pages(data):
     rules = {}
     pages = []
     for elem in data:
@@ -19,7 +19,7 @@ def prepocessing_rules_pages(data):
 
 
 def part_1(data):
-    rules, pages = prepocessing_rules_pages(data)
+    rules, pages = preprocessing_rules_pages(data)
 
     correct_pages = []
 
@@ -38,7 +38,7 @@ def part_1(data):
 
 
 def part_2(data):
-    rules, pages = prepocessing_rules_pages(data)
+    rules, pages = preprocessing_rules_pages(data)
     incorrect_pages = []
 
     for page in pages:
