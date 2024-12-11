@@ -1,10 +1,6 @@
-
 # Advent Of Code Solutions in Python #
 
-[![CircleCI](https://circleci.com/gh/fabiogallotti/adventofcode.svg?style=shield)](https://circleci.com/gh/fabiogallotti/adventofcode)
-[![codecov](https://codecov.io/gh/fabiogallotti/adventofcode/branch/master/graph/badge.svg)](https://codecov.io/gh/fabiogallotti/adventofcode)
-[![Maintainability](https://api.codeclimate.com/v1/badges/5313ca61f9e8394032a6/maintainability)](https://codeclimate.com/github/fabiogallotti/adventofcode/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/5313ca61f9e8394032a6/test_coverage)](https://codeclimate.com/github/fabiogallotti/adventofcode/test_coverage)
+[![Actions Status](https://github.com/fabiogallotti/adventofcode/actions/workflows/lint-test.yml/badge.svg)](https://github.com/fabiogallotti/adventofcode/actions/workflows/lint-test.yml)
 
 |    | 2015        | 2016        | 2017        | 2018        | 2019        | 2020        | 2021        | 2022        | 2023        | 2024        |
 | -- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -19,7 +15,7 @@
 | 09 | [✓][092015] |             |             |             |             | [✓][092020] |             | [✓][092022] | [✓][092023] | [✓][092024] |
 | 10 | [✓][102015] |             |             |             |             | [✓][102020] |             | [✓][102022] | [✓][102023] | [✓][102024] |
 | 11 | [✓][112015] |             |             |             |             | [✓][112020] |             | [✓][112022] | [✓][112023] | [✓][112024] |
-| 12 | [✓][122015] |             |             |             |             | [✓][122020] |             | [✓][122022] | [✓][122023] |             |
+| 12 | [✓][122015] |             |             |             |             | [✓][122020] |             | [✓][122022] | [✓][122023] | [partial][122024] |
 | 13 |             |             |             |             |             | [✓][132020] |             | [✓][132022] | [✓][132023] | [✓][132024] |
 | 14 |             |             |             |             |             | [✓][142020] |             | [✓][142022] | [✓][142023] | [✓][142024] |
 | 15 |             |             |             |             |             | [✓][152020] |             | [✓][152022] | [✓][152023] | [✓][152024] |
@@ -118,7 +114,7 @@
 [092024]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2024/day09
 [102024]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2024/day10
 [112024]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2024/day11
-
+[122024]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2024/day12
 [132024]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2024/day13
 [142024]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2024/day14
 [152024]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2024/day15
