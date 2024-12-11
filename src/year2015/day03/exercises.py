@@ -1,11 +1,10 @@
 from functions.read_input import read_input
 from inputs.path import PATH
 
-from .functions import santa_and_robo_delivers, santa_delivers
+from .functions import part_1, part_2
 
 data = read_input(f"{PATH}/2015/day03.txt")
-data = data[0]
 
-print(f"First part: {santa_delivers(data)}")
+print(f"First part: {part_1(data)}")
 
-print(f"Second part: {santa_and_robo_delivers(data)}")
+print(f"Second part: {part_2(data)}")

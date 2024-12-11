@@ -1,20 +1,18 @@
-def count_floors(data):
-    up = data.count("(")
-    down = data.count(")")
+def part_1(data):
+    instructions = data[0]
+    up = instructions.count("(")
+    down = instructions.count(")")
     return up - down
 
 
-def up_down(elem, floor=0):
-    if elem == "(":
-        floor += 1
-    elif elem == ")":
-        floor -= 1
-    return floor
+def part_2(data):
+    instructions = data[0]
+    floor = 0
+    for index, char in enumerate(instructions):
+        if char == "(":
+            floor += 1
+        elif char == ")":
+            floor -= 1
 
-
-def first_basement(data, floor=0, count=0):
-    for elem in data:
-        count += 1
-        floor = up_down(elem, floor)
         if floor == -1:
-            return count
+            return index + 1

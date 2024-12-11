@@ -1,37 +1,41 @@
-def move(elem, house):
-    if elem == ">":
-        house[0] += 1
-    elif elem == "<":
-        house[0] += -1
-    elif elem == "^":
-        house[1] += 1
-    elif elem == "v":
-        house[1] += -1
+from entities.direction import Direction
+from entities.point import Point
 
 
-def move_and_add(elem, house, locations):
-    move(elem, house)
-    locations.add(tuple(house))
+def part_1(data):
+    house = Point(x=0, y=0)
+    locations = {house}
 
-
-def santa_delivers(data):
-    locations = {(0, 0)}
-    house = [0, 0]
-
-    for elem in data:
-        move_and_add(elem, house, locations)
+    for elem in data[0]:
+        house = move(elem, house)
+        locations.add(house)
 
     return len(locations)
 
 
-def santa_and_robo_delivers(data):
-    locations = {(0, 0)}
-    house_santa = [0, 0]
-    house_robo = [0, 0]
+def part_2(data):
+    house_santa = Point(x=0, y=0)
+    house_robo = Point(x=0, y=0)
+    locations = {house_santa}
 
-    for i, elem in enumerate(data):
-        if i % 2 == 0:
-            move_and_add(elem, house_santa, locations)
+    for i, elem in enumerate(data[0]):
+        if i % 2 != 0:
+            house_santa = move(elem, house_santa)
+            locations.add(house_santa)
         else:
-            move_and_add(elem, house_robo, locations)
+            house_robo = move(elem, house_robo)
+            locations.add(house_robo)
+
     return len(locations)
+
+
+def move(elem, house: Point):
+    if elem == ">":
+        house = house.move(Direction.RIGHT)
+    elif elem == "<":
+        house = house.move(Direction.LEFT)
+    elif elem == "^":
+        house = house.move(Direction.UP)
+    elif elem == "v":
+        house = house.move(Direction.DOWN)
+    return house

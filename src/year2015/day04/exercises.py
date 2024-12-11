@@ -1,11 +1,10 @@
 from functions.read_input import read_input
 from inputs.path import PATH
 
-from .functions import starting_zeros
+from .functions import part_1, part_2
 
-key = read_input(f"{PATH}/2015/day04.txt")
-key = key[0]
+data = read_input(f"{PATH}/2015/day04.txt")
 
-print(f"First part: {starting_zeros(key, 5)}")
+print(f"First part: {part_1(data)}")
 
-print(f"Second part: {starting_zeros(key, 6)}")
+print(f"Second part: {part_2(data)}")

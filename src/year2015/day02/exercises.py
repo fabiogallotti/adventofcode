@@ -1,11 +1,10 @@
 from functions.read_input import read_input
 from inputs.path import PATH
 
-from .functions import calculate_area, calculate_ribbon
+from .functions import part_1, part_2
 
 data = read_input(f"{PATH}/2015/day02.txt")
-data = [elem.split("x") for elem in data]
 
-print(f"First part: {sum([calculate_area(elem) for elem in data])}")
+print(f"First part: {part_1(data)}")
 
-print(f"Second part: {sum([calculate_ribbon(elem) for elem in data])}")
+print(f"Second part: {part_2(data)}")
