@@ -105,7 +105,7 @@ venv.bak/
 
 .vscode
 
-src/inputs/*
+src/inputs
 
 .ruff_cache
 .pdm-build

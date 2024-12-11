@@ -1,11 +1,18 @@
-from functions.read_input import read_input
-from inputs.path import PATH
+def part_1(data):
+    instructions = data[0]
+    up = instructions.count("(")
+    down = instructions.count(")")
+    return up - down
 
-from .functions import count_floors, first_basement
 
-data = read_input(f"{PATH}/2015/day01.txt")
-data = data[0]
+def part_2(data):
+    instructions = data[0]
+    floor = 0
+    for index, char in enumerate(instructions):
+        if char == "(":
+            floor += 1
+        elif char == ")":
+            floor -= 1
 
-print(f"First part: {count_floors(data)}")
-
-print(f"Second part: {first_basement(data)}")
+        if floor == -1:
+            return index + 1

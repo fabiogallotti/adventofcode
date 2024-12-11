@@ -1,32 +1,20 @@
-from year2015.day03.functions import move, move_and_add, santa_and_robo_delivers, santa_delivers
+from year2015.day03.exercises import part_1, part_2
+
+EXAMPLE_1 = [">"]
+EXAMPLE_2 = ["^>v<"]
+EXAMPLE_3 = ["^v^v^v^v^v"]
 
 
-def test_move():
-    house = [0, 0]
-    move(">", house)
-    assert house == [1, 0]
-    move("<", house)
-    assert house == [0, 0]
-    move("^", house)
-    assert house == [0, 1]
-    move("v", house)
-    assert house == [0, 0]
+def test_part_1():
+    assert part_1(EXAMPLE_1) == 2
+    assert part_1(EXAMPLE_2) == 4
+    assert part_1(EXAMPLE_3) == 2
 
 
-def test_move_and_add():
-    locations = {(0, 0)}
-    move_and_add(">", [0, 0], locations)
-
-    assert locations == {(0, 0), (1, 0)}
+EXAMPLE_4 = ["^v"]
 
 
-def test_santa_delivers():
-    assert santa_delivers(">") == 2
-    assert santa_delivers(["^", ">", "v", "<"]) == 4
-    assert santa_delivers(["^", "v", "^", "v", "^", "v", "^", "v", "^", "v"]) == 2
-
-
-def test_santa_and_robo_delivers():
-    assert santa_and_robo_delivers(["^", "v"]) == 3
-    assert santa_and_robo_delivers(["^", ">", "v", "<"]) == 3
-    assert santa_and_robo_delivers(["^", "v", "^", "v", "^", "v", "^", "v", "^", "v"]) == 11
+def test_part_2():
+    assert part_2(EXAMPLE_4) == 3
+    assert part_2(EXAMPLE_2) == 3
+    assert part_2(EXAMPLE_3) == 11

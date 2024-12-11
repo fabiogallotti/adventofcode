@@ -1,5 +1,7 @@
-from year2015.day04.functions import starting_zeros
+from year2015.day04.exercises import part_1
+
+EXAMPLE_1 = ["abcdef"]
 
 
-def test_starting_zeros():
-    assert starting_zeros("abcdef", 5) == 609043
+def test_part_1():
+    assert part_1(EXAMPLE_1) == 609043

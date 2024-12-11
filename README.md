@@ -133,12 +133,22 @@
 
 Start the docker environment:
 
-`make run-docker`
+`make install`
 
-To run the script for the year XXXX / day YY exercise:
+If the venv has not been activated yet, do so:
 
-`python -m <yearXXXX>.<dayYY>.exercises`
+`source .venv/bin/activate`
 
-To run the tests:
+To solve the exercise for year XXXX / day YY / part Z you can use the following command:
+
+`aoc --year XXXX --day YY --part Z`
+
+it will automatically download the input file from advent of code website.
+
+If you don't specify any part, it will try to solve both of them.
+
+## To run the tests ##
+
+Please use the following command:
 
 `make test`

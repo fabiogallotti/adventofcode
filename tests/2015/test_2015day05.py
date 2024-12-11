@@ -1,53 +1,28 @@
-from year2015.day05.functions import (
-    contains,
-    nice_string_first,
-    nice_string_second,
-    pair_two_letters,
-    repeats_with_one_between,
-    three_vowels,
-    twice_in_a_row,
-)
+from year2015.day05.exercises import part_1, part_2
+
+EXAMPLE_1 = ["ugknbfddgicrmopn"]
+EXAMPLE_2 = ["aaa"]
+EXAMPLE_3 = ["jchzalrnumimnmhp"]
+EXAMPLE_4 = ["haegwjzuvuyypxyu"]
+EXAMPLE_5 = ["dvszwmarrgswjxmb"]
 
 
-def test_three_vowels():
-    assert three_vowels("aei") == True
-    assert three_vowels("aba") == False
+def test_part_1():
+    assert part_1(EXAMPLE_1) == 1
+    assert part_1(EXAMPLE_2) == 1
+    assert part_1(EXAMPLE_3) == 0
+    assert part_1(EXAMPLE_4) == 0
+    assert part_1(EXAMPLE_5) == 0
 
 
-def test_twice_in_a_row():
-    assert twice_in_a_row("xx") == True
-    assert twice_in_a_row("abcdde") == True
-    assert twice_in_a_row("aabbccdd") == True
-    assert twice_in_a_row("abcd") == False
+EXAMPLE_6 = ["qjhvhtzxzqqjkmpb"]
+EXAMPLE_7 = ["xxyxx"]
+EXAMPLE_8 = ["uurcxstgmygtbstg"]
+EXAMPLE_9 = ["ieodomkazucvgmuy"]
 
 
-def test_contains():
-    assert contains("xyz") == True
-    assert contains("aaa") == False
-
-
-def test_nice_string_first():
-    assert nice_string_first("ugknbfddgicrmopn") == True
-    assert nice_string_first("aaa") == True
-    assert nice_string_first("jchzalrnumimnmhp") == False
-    assert nice_string_first("haegwjzuvuyypxyu") == False
-    assert nice_string_first("dvszwmarrgswjxmb") == False
-
-
-def test_pair_two_letters():
-    assert pair_two_letters("aaa") == False
-    assert pair_two_letters("xyxy") == True
-    assert pair_two_letters("aabcdefgaa") == True
-
-
-def test_repeats_with_one_between():
-    assert repeats_with_one_between("xyx") == True
-    assert repeats_with_one_between("abcdefeghi") == True
-    assert repeats_with_one_between("abc") == False
-
-
-def test_nice_string_second():
-    assert nice_string_second("qjhvhtzxzqqjkmpb") == True
-    assert nice_string_second("xxyxx") == True
-    assert nice_string_second("uurcxstgmygtbstg") == False
-    assert nice_string_second("ieodomkazucvgmuy") == False
+def test_part_2():
+    assert part_2(EXAMPLE_6) == 1
+    assert part_2(EXAMPLE_7) == 1
+    assert part_2(EXAMPLE_8) == 0
+    assert part_2(EXAMPLE_9) == 0

@@ -7,11 +7,17 @@ dependencies = [
     "numpy>=2.2.0",
     "pillow>=11.0.0",
     "pydantic>=2.10.2",
+    "python-dotenv>=1.0.1",
+    "requests>=2.32.3",
+    "typer-slim>=0.15.1",
 ]
 name = "adventofcode"
 version = "0.1.0"
 description = ""
 readme = "README.md"
+
+[project.scripts]
+aoc = "app.aoc:app"
 
 [tool.uv]
 dev-dependencies = ["pre-commit>=4.0.1", "pytest>=8.3.4", "ruff>=0.8.1"]

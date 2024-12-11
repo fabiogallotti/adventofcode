@@ -1,15 +1,14 @@
-from year2015.day02.functions import calculate_area, calculate_ribbon, convert_to_int
+from year2015.day02.exercises import part_1, part_2
+
+EXAMPLE_1 = ["2x3x4"]
+EXAMPLE_2 = ["1x1x10"]
 
 
-def test_calculate_area():
-    assert calculate_area(["2", "3", "4"]) == 58
-    assert calculate_area(["1", "1", "10"]) == 43
+def test_part_1():
+    assert part_1(EXAMPLE_1) == 58
+    assert part_1(EXAMPLE_2) == 43
 
 
-def test_calculate_ribbon():
-    assert calculate_ribbon(["2", "3", "4"]) == 34
-    assert calculate_ribbon(["1", "1", "10"]) == 14
-
-
-def test_convert_to_int():
-    assert convert_to_int(["2", "3", "4"]) == (2, 3, 4)
+def test_part_2():
+    assert part_2(EXAMPLE_1) == 34
+    assert part_2(EXAMPLE_2) == 14

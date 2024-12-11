@@ -10,6 +10,7 @@ help: ## show this help
 install: ## install dependencies
 	uv sync --all-extras --dev
 	pre-commit install
+	source .venv/bin/activate
 
 .PHONY: lint
 lint: ## lint code

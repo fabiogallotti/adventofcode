@@ -1,11 +1,22 @@
-from functions.read_input import read_input
-from inputs.path import PATH
+import hashlib
 
-from .functions import starting_zeros
 
-key = read_input(f"{PATH}/2015/day04.txt")
-key = key[0]
+def part_1(data):
+    key = data[0]
+    return get_hash(key, 5)
 
-print(f"First part: {starting_zeros(key, 5)}")
 
-print(f"Second part: {starting_zeros(key, 6)}")
+def part_2(data):
+    key = data[0]
+    return get_hash(key, 6)
+
+
+def get_hash(key, zero_count):
+    target = "0" * zero_count
+    count = 1
+    while True:
+        phrase = f"{key}{count}"
+        result = hashlib.md5(phrase.encode("utf-8")).hexdigest()
+        if result.startswith(target):
+            return count
+        count += 1
