@@ -20,7 +20,7 @@
 | 10 | [✓][102015] |             |             |             |             | [✓][102020] |             | [✓][102022] | [✓][102023] | [✓][102024] |
 | 11 | [✓][112015] |             |             |             |             | [✓][112020] |             | [✓][112022] | [✓][112023] | [✓][112024] |
 | 12 | [✓][122015] |             |             |             |             | [✓][122020] |             | [✓][122022] | [✓][122023] |             |
-| 13 |             |             |             |             |             | [✓][132020] |             | [✓][132022] | [✓][132023] |             |
+| 13 |             |             |             |             |             | [✓][132020] |             | [✓][132022] | [✓][132023] | [✓][132024] |
 | 14 |             |             |             |             |             | [✓][142020] |             | [✓][142022] | [✓][142023] |             |
 | 15 |             |             |             |             |             | [✓][152020] |             | [✓][152022] | [✓][152023] |             |
 | 16 |             |             |             |             |             |             |             | [✓][162022] | [✓][162023] |             |
@@ -118,6 +118,8 @@
 [092024]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2024/day09
 [102024]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2024/day10
 [112024]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2024/day11
+
+[132024]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2024/day13
 
 ## To run an exercise ##
 

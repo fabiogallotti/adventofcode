@@ -1,7 +1,10 @@
 [project]
 authors = [{ name = "Fabio Gallotti", email = "fabio.gallotti.93@gmail.com" }]
 requires-python = ">=3.13"
-dependencies = ["pydantic>=2.10.2"]
+dependencies = [
+    "numpy>=2.2.0",
+    "pydantic>=2.10.2",
+]
 name = "adventofcode"
 version = "0.1.0"
 description = ""
