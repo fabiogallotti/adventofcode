@@ -20,10 +20,6 @@ class Direction(Enum):
     LEFT = (0, -1)
 
 
-def inside_borders(point, max_x, max_y):
-    return 0 <= point.x <= max_x and 0 <= point.y <= max_y
-
-
 def check_around(point, map_dict, max_x, max_y):
     if point.value == 9:
         return 1
