@@ -109,3 +109,4 @@ src/inputs/*
 
 .ruff_cache
 .pdm-build
+.DS_Store
