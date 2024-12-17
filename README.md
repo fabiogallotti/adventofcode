@@ -20,7 +20,7 @@
 | 14 |             |             |             |             |             | [✓][142020] |             | [✓][142022] | [✓][142023] | [✓][142024] |
 | 15 |             |             |             |             |             | [✓][152020] |             | [✓][152022] | [✓][152023] | [✓][152024] |
 | 16 |             |             |             |             |             |             |             | [✓][162022] | [✓][162023] | [✓][162024] |
-| 17 |             |             |             |             |             |             |             |             |             |             |
+| 17 |             |             |             |             |             |             |             |             |             | [partial][172024] |
 | 18 |             |             |             |             |             |             |             |             |             | [✓][182024] |
 | 19 |             |             |             |             |             |             |             |             |             |             |
 | 20 |             |             |             |             |             |             |             |             |             |             |
@@ -119,7 +119,7 @@
 [142024]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2024/day14
 [152024]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2024/day15
 [162024]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2024/day16
-
+[172024]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2024/day17
 [182024]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2024/day18
 
 ## To run an exercise ##
