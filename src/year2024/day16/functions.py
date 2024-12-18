@@ -47,7 +47,6 @@ def preprocessing(data):
 
 def build_graph(walls, max_x, max_y):
     graph = nx.DiGraph()
-
     directions = list(Direction)
 
     nodes = []
@@ -88,7 +87,7 @@ def part_1(data):
     max_y = len(data[0])
     walls, start, end = preprocessing(data)
 
-    graph = build_graph(walls, max_x, max_y)
+    graph = build_graph(set(walls), max_x, max_y)
 
     start_node = (start, Direction.RIGHT)
     end_node = (end, Direction.UP)
@@ -101,7 +100,7 @@ def part_2(data):
     max_y = len(data[0])
     walls, start, end = preprocessing(data)
 
-    graph = build_graph(walls, max_x, max_y)
+    graph = build_graph(set(walls), max_x, max_y)
 
     start_node = (start, Direction.RIGHT)
     end_node = (end, Direction.UP)
