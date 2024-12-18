@@ -1,4 +1,4 @@
-from year2024.day12.functions import part_1
+from year2024.day12.functions import part_1, part_2
 
 EXAMPLE_1 = [
     "AAAA",
@@ -54,9 +54,9 @@ def test_part_1():
     assert part_1(EXAMPLE_3) == 1930
 
 
-# def test_part_2():
-#     assert part_2(EXAMPLE_1) == 80
-#     assert part_2(EXAMPLE_2) == 436
-#     assert part_1(EXAMPLE_3) == 1206
-#     assert part_2(EXAMPLE_4) == 236
-#     assert part_2(EXAMPLE_5) == 368
+def test_part_2():
+    assert part_2(EXAMPLE_1) == 80
+    assert part_2(EXAMPLE_2) == 436
+    assert part_2(EXAMPLE_3) == 1206
+    assert part_2(EXAMPLE_4) == 236
+    assert part_2(EXAMPLE_5) == 368
