@@ -100,31 +100,20 @@ def part_1(data):
 
 
 def part_2(data):
-    # 8^15 < register_a < 8^16
-
     _, b, c, program = preprocessing(data)
-    div = []
-    max_power = len(program)
 
-    for i in range(8):
-        computer = Computer(program=program, register_a=i, register_b=b, register_c=c)
-        computer.run()
-        if computer.output and [str(out) for out in computer.output] == program[-1:]:
-            div.append(i)
-    new_a = div.copy()
+    valid_values = {0}
+    for i in range(len(program)):
+        next_values = set()
 
-    for power in range(1, max_power):
-        start = 8**power
-        end = 8 ** (power + 1)
-        div = []
-
-        for i in range(start, end):
-            if i // 8 in new_a:
-                computer = Computer(program=program, register_a=i, register_b=b, register_c=c)
+        for value in valid_values:
+            next_a = value * 8
+            for j in range(next_a, next_a + 8):
+                computer = Computer(program=program, register_a=j, register_b=b, register_c=c)
                 computer.run()
-                expected_output = program[-(power + 1) :]
-                if computer.output and [str(out) for out in computer.output] == expected_output:
-                    div.append(i)
 
-        new_a = div.copy()
-    return new_a[0]
+                if computer.output and [str(out) for out in computer.output] == program[-(i + 1) :]:
+                    next_values.add(j)
+
+        valid_values = next_values
+    return min(valid_values)
