@@ -26,7 +26,7 @@
 | 20 |             |             |             |             |             |             |             |             |             | [✓][202024] |
 | 21 |             |             |             |             |             |             |             |             |             |             |
 | 22 |             |             |             |             |             |             |             |             |             | [✓][222024] |
-| 23 |             |             |             |             |             |             |             |             |             |             |
+| 23 |             |             |             |             |             |             |             |             |             | [✓][232024] |
 | 24 |             |             |             |             |             |             |             |             |             |             |
 | 25 |             |             |             |             |             |             |             |             |             |             |
 
@@ -125,6 +125,7 @@
 [202024]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2024/day20
 
 [222024]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2024/day22
+[232024]: https://github.com/fabiogallotti/adventofcode/tree/master/src/year2024/day23
 
 ## To run an exercise ##
 
