@@ -60,7 +60,7 @@ def solve_problem(problem, data):
     memory = {}
     for elem in data:
         if "mask" in elem:
-            mask, bits_to_change = get_mask_bits_to_change(problem, elem)
+            _mask, bits_to_change = get_mask_bits_to_change(problem, elem)
         elif "mem" in elem:
             memory_position, value, binary_repr = get_infos(problem, elem)
 

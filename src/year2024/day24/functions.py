@@ -73,7 +73,7 @@ def part_1(data):
 
 
 def part_2(data):
-    wires, instructions = preprocessing(data)
+    _wires, instructions = preprocessing(data)
 
     # execute_instructions(wires, instructions)
 

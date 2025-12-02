@@ -38,7 +38,7 @@ def set_of_possible_values(data):
 
 
 def find_invalid_values(data):
-    fields, intervals, myticket, nearby, setofvalues = set_of_possible_values(data)
+    _fields, _intervals, _myticket, nearby, setofvalues = set_of_possible_values(data)
 
     return [value for ticket in nearby for value in ticket if value not in setofvalues]
 
