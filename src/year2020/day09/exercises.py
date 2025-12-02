@@ -10,4 +10,4 @@ invalid = find_not_sum_preamble(data.copy(), 25)
 
 print(f"First part: {invalid}")
 
-print(f"Second part: {sum_weakness(data,invalid)}")
+print(f"Second part: {sum_weakness(data, invalid)}")

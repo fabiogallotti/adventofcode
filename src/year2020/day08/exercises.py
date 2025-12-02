@@ -16,4 +16,4 @@ print(f"First part: {calculate_accumulator_value(data)}")
 
 jmp_positions = find_positions(data, "jmp")
 
-print(f"Second part: {calculate_value_switching_positions(data,jmp_positions)}")
+print(f"Second part: {calculate_value_switching_positions(data, jmp_positions)}")
