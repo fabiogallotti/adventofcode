@@ -3,7 +3,7 @@ from inputs.path import PATH
 
 from .functions import part_1, part_2
 
-data = read_input(f"{PATH}/2025/day02.txt")
+data = read_input(f"{PATH}/2025/day03.txt")
 
 print(f"First part: {part_1(data)}")
 
