@@ -9,7 +9,7 @@ help: ## show this help
 .PHONY: install
 install: ## install dependencies
 	uv sync --all-extras --dev
-	pre-commit install
+	prek install
 
 .PHONY: lint
 lint: ## lint code
