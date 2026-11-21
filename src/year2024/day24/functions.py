@@ -59,7 +59,7 @@ def execute_instructions(wires, instructions):
                     a = wires[elem[0]]
                     b = wires[elem[1]]
                     wires[elem[2]] = operation(a, b)
-                    instructions[op].remove(elem)
+                    value.remove(elem)
 
 
 def part_1(data):

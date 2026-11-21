@@ -122,5 +122,3 @@ def part_2(data, max_x=101, max_y=103):
 
         for i in range(len(robots)):
             robots[i] = robots[i].move()
-
-    return None

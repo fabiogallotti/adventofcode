@@ -23,7 +23,7 @@ def part_1(data):
         if row := mirror_row(pattern):
             total += row * 100
 
-        reverse = list(zip(*pattern))
+        reverse = list(zip(*pattern, strict=False))
         if col := mirror_row(reverse):
             total += col
 
@@ -50,7 +50,7 @@ def part_2(data):
         if row := mirror_row_2(pattern):
             total += row * 100
 
-        reverse = list(zip(*pattern))
+        reverse = list(zip(*pattern, strict=False))
         if col := mirror_row_2(reverse):
             total += col
 

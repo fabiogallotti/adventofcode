@@ -17,13 +17,12 @@ def recursion(spring, group):
 
     if spring[0] in [".", "?"]:
         result += recursion(spring[1:], group)
-    if spring[0] in ["#", "?"]:
-        if (
-            group[0] <= len(spring)
-            and "." not in spring[: group[0]]
-            and (group[0] == len(spring) or spring[group[0]] != "#")
-        ):
-            result += recursion(spring[group[0] + 1 :], group[1:])
+    if spring[0] in ["#", "?"] and (
+        group[0] <= len(spring)
+        and "." not in spring[: group[0]]
+        and (group[0] == len(spring) or spring[group[0]] != "#")
+    ):
+        result += recursion(spring[group[0] + 1 :], group[1:])
 
     return result
 
@@ -57,13 +56,12 @@ def recursion_2(spring, group, checked):
 
     if spring[0] in [".", "?"]:
         result += recursion_2(spring[1:], group, checked)
-    if spring[0] in ["#", "?"]:
-        if (
-            group[0] <= len(spring)
-            and "." not in spring[: group[0]]
-            and (group[0] == len(spring) or spring[group[0]] != "#")
-        ):
-            result += recursion_2(spring[group[0] + 1 :], group[1:], checked)
+    if spring[0] in ["#", "?"] and (
+        group[0] <= len(spring)
+        and "." not in spring[: group[0]]
+        and (group[0] == len(spring) or spring[group[0]] != "#")
+    ):
+        result += recursion_2(spring[group[0] + 1 :], group[1:], checked)
 
     checked[key] = result
     return result

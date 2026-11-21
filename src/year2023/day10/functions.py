@@ -121,12 +121,12 @@ def part_2(data):
 
     for i, row in enumerate(data):
         for j, value in enumerate(row):
-            p = Point(point=data[i][j], x=i, y=j)
+            p = Point(point=value, x=i, y=j)
             if p not in visited_points:
                 k = p.y + 1
                 count = 0
                 while k < max_column:
-                    new_p = Point(point=data[i][k], x=i, y=k)
+                    new_p = Point(point=row[k], x=i, y=k)
                     if (
                         new_p.point
                         in [
@@ -141,9 +141,7 @@ def part_2(data):
                         previous_p = visited_points[1]
                         next_p = visited_points[-2]
 
-                        if abs(next_p.x - previous_p.x) == 2:
-                            count += 1
-                        elif (
+                        if abs(next_p.x - previous_p.x) == 2 or (
                             abs(next_p.x - previous_p.x) == 1 and abs(next_p.y - previous_p.y) == 1
                         ):
                             count += 1

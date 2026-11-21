@@ -9,12 +9,12 @@ def preprocessing(data):
         numbers = [int(x[0]) for x in contains if x[0].isnumeric()]
         contains = [x[2:].replace(" ", "_") for x in contains]
 
-        dict_[bags] = {k: v for k, v in zip(contains, numbers)}
+        dict_[bags] = dict(zip(contains, numbers, strict=False))
     return dict_
 
 
 def find_bags_can_contain(bag, rules):
-    return [outer for outer, contains in rules.items() if bag in contains.keys()]
+    return [outer for outer, contains in rules.items() if bag in contains]
 
 
 def number_containing_bags(bags_to_find, rules):

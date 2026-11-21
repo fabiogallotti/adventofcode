@@ -19,7 +19,9 @@ def preprocessing(data):
     files_expanded = [File(value=i, times=int(files[i])) for i in range(len(files))]
     free_expanded = [Free(value=".", times=int(free[i])) for i in range(len(free))]
 
-    complete_list = [item for pair in zip(files_expanded, free_expanded) for item in pair]
+    complete_list = [
+        item for pair in zip(files_expanded, free_expanded, strict=False) for item in pair
+    ]
 
     complete_list.extend(files_expanded[len(free_expanded) :])
 

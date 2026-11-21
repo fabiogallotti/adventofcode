@@ -8,8 +8,7 @@ def part_1(data):
 
                 int_num = int(num)
 
-                if int_num > max_num:
-                    max_num = int_num
+                max_num = max(max_num, int_num)
         total += max_num
 
     return total

@@ -34,7 +34,7 @@ def preprocessing(data):
 
     for i, row in enumerate(data):
         for j in range(len(row)):
-            value = data[i][j]
+            value = row[j]
             if value == "#":
                 walls.append(Position(x=i, y=j))
             elif value == "S":

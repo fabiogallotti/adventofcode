@@ -52,7 +52,6 @@ def part_2(data):
 
         scenic_score = left_vd * right_vd * up_vd * down_vd
 
-        if scenic_score > max_scenic_score:
-            max_scenic_score = scenic_score
+        max_scenic_score = max(max_scenic_score, scenic_score)
 
     return max_scenic_score

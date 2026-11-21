@@ -47,9 +47,7 @@ def part_2(data):
 
     focusing_power = 0
     for box, value in boxes.items():
-        box_power = sum(
-            (1 + int(box)) * (boxes[box].index(lens) + 1) * int(lens[1]) for lens in value
-        )
+        box_power = sum((1 + int(box)) * (value.index(lens) + 1) * int(lens[1]) for lens in value)
         focusing_power += box_power
 
     return focusing_power

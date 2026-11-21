@@ -8,7 +8,7 @@ def get_symbol_adjacent(data):
             if i == 0:
                 if j == 0:
                     if value.isnumeric() and (
-                        (data[i][j + 1] != "." and not data[i][j + 1].isnumeric())
+                        (row[j + 1] != "." and not row[j + 1].isnumeric())
                         or (  # destra
                             data[i + 1][j + 1] != "." and not data[i + 1][j + 1].isnumeric()
                         )
@@ -19,7 +19,7 @@ def get_symbol_adjacent(data):
                         symbol_adjacent.append((i, j))
                 elif 0 < j < max_j:
                     if value.isnumeric() and (
-                        (data[i][j + 1] != "." and not data[i][j + 1].isnumeric())
+                        (row[j + 1] != "." and not row[j + 1].isnumeric())
                         or (  # destra
                             data[i + 1][j + 1] != "." and not data[i + 1][j + 1].isnumeric()
                         )
@@ -30,21 +30,24 @@ def get_symbol_adjacent(data):
                             data[i + 1][j - 1] != "." and not data[i + 1][j - 1].isnumeric()
                         )
                         or (  # sotto sinistra
-                            data[i][j - 1] != "." and not data[i][j - 1].isnumeric()
+                            row[j - 1] != "." and not row[j - 1].isnumeric()
                         )  # sinistra
                     ):
                         symbol_adjacent.append((i, j))
-                elif j == max_j:
-                    if value.isnumeric() and (
+                elif (
+                    j == max_j
+                    and value.isnumeric()
+                    and (
                         (data[i + 1][j] != "." and not data[i + 1][j].isnumeric())
                         or (  # sotto
                             data[i + 1][j - 1] != "." and not data[i + 1][j - 1].isnumeric()
                         )
                         or (  # sotto sinistra
-                            data[i][j - 1] != "." and not data[i][j - 1].isnumeric()
+                            row[j - 1] != "." and not row[j - 1].isnumeric()
                         )  # sinistra
-                    ):
-                        symbol_adjacent.append((i, j))
+                    )
+                ):
+                    symbol_adjacent.append((i, j))
 
             elif 0 < i < max_i:
                 if j == 0:
@@ -54,7 +57,7 @@ def get_symbol_adjacent(data):
                             data[i - 1][j + 1] != "." and not data[i - 1][j + 1].isnumeric()
                         )
                         or (  # sopra destra
-                            data[i][j + 1] != "." and not data[i][j + 1].isnumeric()
+                            row[j + 1] != "." and not row[j + 1].isnumeric()
                         )
                         or (  # destra
                             data[i + 1][j + 1] != "." and not data[i + 1][j + 1].isnumeric()
@@ -74,7 +77,7 @@ def get_symbol_adjacent(data):
                             data[i - 1][j + 1] != "." and not data[i - 1][j + 1].isnumeric()
                         )
                         or (  # sopra destra
-                            data[i][j + 1] != "." and not data[i][j + 1].isnumeric()
+                            row[j + 1] != "." and not row[j + 1].isnumeric()
                         )
                         or (  # destra
                             data[i + 1][j + 1] != "." and not data[i + 1][j + 1].isnumeric()
@@ -86,12 +89,14 @@ def get_symbol_adjacent(data):
                             data[i + 1][j - 1] != "." and not data[i + 1][j - 1].isnumeric()
                         )
                         or (  # sotto sinistra
-                            data[i][j - 1] != "." and not data[i][j - 1].isnumeric()
+                            row[j - 1] != "." and not row[j - 1].isnumeric()
                         )  # sinistra
                     ):
                         symbol_adjacent.append((i, j))
-                elif j == max_j:
-                    if value.isnumeric() and (
+                elif (
+                    j == max_j
+                    and value.isnumeric()
+                    and (
                         (data[i - 1][j - 1] != "." and not data[i - 1][j - 1].isnumeric())
                         or (  # sopra sinistra
                             data[i - 1][j] != "." and not data[i - 1][j].isnumeric()
@@ -101,10 +106,11 @@ def get_symbol_adjacent(data):
                             data[i + 1][j - 1] != "." and not data[i + 1][j - 1].isnumeric()
                         )
                         or (  # sotto sinistra
-                            data[i][j - 1] != "." and not data[i][j - 1].isnumeric()
+                            row[j - 1] != "." and not row[j - 1].isnumeric()
                         )  # sinistra
-                    ):
-                        symbol_adjacent.append((i, j))
+                    )
+                ):
+                    symbol_adjacent.append((i, j))
 
             elif i == max_i:
                 if j == 0:
@@ -114,7 +120,7 @@ def get_symbol_adjacent(data):
                             data[i - 1][j + 1] != "." and not data[i - 1][j + 1].isnumeric()
                         )
                         or (  # sopra destra
-                            data[i][j + 1] != "." and not data[i][j + 1].isnumeric()
+                            row[j + 1] != "." and not row[j + 1].isnumeric()
                         )  # destra
                     ):
                         symbol_adjacent.append((i, j))
@@ -128,24 +134,27 @@ def get_symbol_adjacent(data):
                             data[i - 1][j + 1] != "." and not data[i - 1][j + 1].isnumeric()
                         )
                         or (  # sopra destra
-                            data[i][j + 1] != "." and not data[i][j + 1].isnumeric()
+                            row[j + 1] != "." and not row[j + 1].isnumeric()
                         )
                         or (  # destra
-                            data[i][j - 1] != "." and not data[i][j - 1].isnumeric()
+                            row[j - 1] != "." and not row[j - 1].isnumeric()
                         )  # sinistra
                     ):
                         symbol_adjacent.append((i, j))
-                elif j == max_j:
-                    if value.isnumeric() and (
+                elif (
+                    j == max_j
+                    and value.isnumeric()
+                    and (
                         (data[i - 1][j - 1] != "." and not data[i - 1][j - 1].isnumeric())
                         or (  # sopra sinistra
                             data[i - 1][j] != "." and not data[i - 1][j].isnumeric()
                         )
                         or (  # sopra
-                            data[i][j - 1] != "." and not data[i][j - 1].isnumeric()
+                            row[j - 1] != "." and not row[j - 1].isnumeric()
                         )  # sinistra
-                    ):
-                        symbol_adjacent.append((i, j))
+                    )
+                ):
+                    symbol_adjacent.append((i, j))
 
     for x, y in symbol_adjacent:
         if ((x, y + 1) in symbol_adjacent) and ((x, y + 2) in symbol_adjacent):
@@ -269,7 +278,7 @@ def get_gear_adjacent(data, symbol_adjacent):
                         if (i, j) not in number_adjacent:
                             number_adjacent[(i, j)] = []
 
-                        if data[i][j + 1].isnumeric() and (i, j + 1) in symbol_adjacent:  # destra
+                        if row[j + 1].isnumeric() and (i, j + 1) in symbol_adjacent:  # destra
                             number_adjacent[(i, j)].append((i, j + 1))
                         if (
                             data[i + 1][j + 1].isnumeric() and (i + 1, j + 1) in symbol_adjacent
@@ -283,7 +292,7 @@ def get_gear_adjacent(data, symbol_adjacent):
                         if (i, j) not in number_adjacent:
                             number_adjacent[(i, j)] = []
 
-                        if data[i][j + 1].isnumeric() and (i, j + 1) in symbol_adjacent:  # destra
+                        if row[j + 1].isnumeric() and (i, j + 1) in symbol_adjacent:  # destra
                             number_adjacent[(i, j)].append((i, j + 1))
                         if (
                             data[i + 1][j + 1].isnumeric() and (i + 1, j + 1) in symbol_adjacent
@@ -295,22 +304,21 @@ def get_gear_adjacent(data, symbol_adjacent):
                             data[i + 1][j - 1].isnumeric() and (i + 1, j - 1) in symbol_adjacent
                         ):  # sotto sinistra
                             number_adjacent[(i, j)].append((i + 1, j - 1))
-                        if data[i][j - 1].isnumeric() and (i, j - 1) in symbol_adjacent:  # sinistra
+                        if row[j - 1].isnumeric() and (i, j - 1) in symbol_adjacent:  # sinistra
                             number_adjacent[(i, j)].append((i, j - 1))
 
-                elif j == max_j:
-                    if value == GEAR_SYMBOL:
-                        if (i, j) not in number_adjacent:
-                            number_adjacent[(i, j)] = []
+                elif j == max_j and value == GEAR_SYMBOL:
+                    if (i, j) not in number_adjacent:
+                        number_adjacent[(i, j)] = []
 
-                        if data[i + 1][j].isnumeric() and (i + 1, j) in symbol_adjacent:  # sotto
-                            number_adjacent[(i, j)].append((i + 1, j))
-                        if (
-                            data[i + 1][j - 1].isnumeric() and (i + 1, j - 1) in symbol_adjacent
-                        ):  # sotto sinistra
-                            number_adjacent[(i, j)].append((i + 1, j - 1))
-                        if data[i][j - 1].isnumeric() and (i, j - 1) in symbol_adjacent:  # sinistra
-                            number_adjacent[(i, j)].append((i, j - 1))
+                    if data[i + 1][j].isnumeric() and (i + 1, j) in symbol_adjacent:  # sotto
+                        number_adjacent[(i, j)].append((i + 1, j))
+                    if (
+                        data[i + 1][j - 1].isnumeric() and (i + 1, j - 1) in symbol_adjacent
+                    ):  # sotto sinistra
+                        number_adjacent[(i, j)].append((i + 1, j - 1))
+                    if row[j - 1].isnumeric() and (i, j - 1) in symbol_adjacent:  # sinistra
+                        number_adjacent[(i, j)].append((i, j - 1))
 
             elif 0 < i < max_i:
                 if j == 0:
@@ -324,7 +332,7 @@ def get_gear_adjacent(data, symbol_adjacent):
                             data[i - 1][j + 1].isnumeric() and (i - 1, j + 1) in symbol_adjacent
                         ):  # sopra destra
                             number_adjacent[(i, j)].append((i - 1, j + 1))
-                        if data[i][j + 1].isnumeric() and (i, j + 1) in symbol_adjacent:  # destra
+                        if row[j + 1].isnumeric() and (i, j + 1) in symbol_adjacent:  # destra
                             number_adjacent[(i, j)].append((i, j + 1))
                         if (
                             data[i + 1][j + 1].isnumeric() and (i + 1, j + 1) in symbol_adjacent
@@ -348,7 +356,7 @@ def get_gear_adjacent(data, symbol_adjacent):
                             data[i - 1][j + 1].isnumeric() and (i - 1, j + 1) in symbol_adjacent
                         ):  # sopra destra
                             number_adjacent[(i, j)].append((i - 1, j + 1))
-                        if data[i][j + 1].isnumeric() and (i, j + 1) in symbol_adjacent:  # destra
+                        if row[j + 1].isnumeric() and (i, j + 1) in symbol_adjacent:  # destra
                             number_adjacent[(i, j)].append((i, j + 1))
                         if (
                             data[i + 1][j + 1].isnumeric() and (i + 1, j + 1) in symbol_adjacent
@@ -360,28 +368,27 @@ def get_gear_adjacent(data, symbol_adjacent):
                             data[i + 1][j - 1].isnumeric() and (i + 1, j - 1) in symbol_adjacent
                         ):  # sotto sinistra
                             number_adjacent[(i, j)].append((i + 1, j - 1))
-                        if data[i][j - 1].isnumeric() and (i, j - 1) in symbol_adjacent:  # sinistra
+                        if row[j - 1].isnumeric() and (i, j - 1) in symbol_adjacent:  # sinistra
                             number_adjacent[(i, j)].append((i, j - 1))
 
-                elif j == max_j:
-                    if value == GEAR_SYMBOL:
-                        if (i, j) not in number_adjacent:
-                            number_adjacent[(i, j)] = []
+                elif j == max_j and value == GEAR_SYMBOL:
+                    if (i, j) not in number_adjacent:
+                        number_adjacent[(i, j)] = []
 
-                        if (
-                            data[i - 1][j - 1].isnumeric() and (i - 1, j - 1) in symbol_adjacent
-                        ):  # sopra sinistra
-                            number_adjacent[(i, j)].append((i - 1, j - 1))
-                        if data[i - 1][j].isnumeric() and (i - 1, j) in symbol_adjacent:  # sopra
-                            number_adjacent[(i, j)].append((i - 1, j))
-                        if data[i + 1][j].isnumeric() and (i + 1, j) in symbol_adjacent:  # sotto
-                            number_adjacent[(i, j)].append((i + 1, j))
-                        if (
-                            data[i + 1][j - 1].isnumeric() and (i + 1, j - 1) in symbol_adjacent
-                        ):  # sotto sinistra
-                            number_adjacent[(i, j)].append((i + 1, j - 1))
-                        if data[i][j - 1].isnumeric() and (i, j - 1) in symbol_adjacent:  # sinistra
-                            number_adjacent[(i, j)].append((i, j - 1))
+                    if (
+                        data[i - 1][j - 1].isnumeric() and (i - 1, j - 1) in symbol_adjacent
+                    ):  # sopra sinistra
+                        number_adjacent[(i, j)].append((i - 1, j - 1))
+                    if data[i - 1][j].isnumeric() and (i - 1, j) in symbol_adjacent:  # sopra
+                        number_adjacent[(i, j)].append((i - 1, j))
+                    if data[i + 1][j].isnumeric() and (i + 1, j) in symbol_adjacent:  # sotto
+                        number_adjacent[(i, j)].append((i + 1, j))
+                    if (
+                        data[i + 1][j - 1].isnumeric() and (i + 1, j - 1) in symbol_adjacent
+                    ):  # sotto sinistra
+                        number_adjacent[(i, j)].append((i + 1, j - 1))
+                    if row[j - 1].isnumeric() and (i, j - 1) in symbol_adjacent:  # sinistra
+                        number_adjacent[(i, j)].append((i, j - 1))
 
             elif i == max_i:
                 if j == 0:
@@ -395,7 +402,7 @@ def get_gear_adjacent(data, symbol_adjacent):
                             data[i - 1][j + 1].isnumeric() and (i - 1, j + 1) in symbol_adjacent
                         ):  # sopra destra
                             number_adjacent[(i, j)].append((i - 1, j + 1))
-                        if data[i][j + 1].isnumeric() and (i, j + 1) in symbol_adjacent:  # destra
+                        if row[j + 1].isnumeric() and (i, j + 1) in symbol_adjacent:  # destra
                             number_adjacent[(i, j)].append((i, j + 1))
 
                 elif 0 < j < max_j:
@@ -413,23 +420,22 @@ def get_gear_adjacent(data, symbol_adjacent):
                             data[i - 1][j + 1].isnumeric() and (i - 1, j + 1) in symbol_adjacent
                         ):  # sopra destra
                             number_adjacent[(i, j)].append((i - 1, j + 1))
-                        if data[i][j + 1].isnumeric() and (i, j + 1) in symbol_adjacent:  # destra
+                        if row[j + 1].isnumeric() and (i, j + 1) in symbol_adjacent:  # destra
                             number_adjacent[(i, j)].append((i, j + 1))
-                        if data[i][j - 1].isnumeric() and (i, j - 1) in symbol_adjacent:  # sinistra
+                        if row[j - 1].isnumeric() and (i, j - 1) in symbol_adjacent:  # sinistra
                             number_adjacent[(i, j)].append((i, j - 1))
 
-                elif j == max_j:
-                    if value == GEAR_SYMBOL:
-                        if (i, j) not in number_adjacent:
-                            number_adjacent[(i, j)] = []
+                elif j == max_j and value == GEAR_SYMBOL:
+                    if (i, j) not in number_adjacent:
+                        number_adjacent[(i, j)] = []
 
-                        if (
-                            data[i - 1][j - 1].isnumeric() and (i - 1, j - 1) in symbol_adjacent
-                        ):  # sopra sinistra
-                            number_adjacent[(i, j)].append((i - 1, j - 1))
-                        if data[i - 1][j].isnumeric() and (i - 1, j) in symbol_adjacent:  # sopra
-                            number_adjacent[(i, j)].append((i - 1, j))
-                        if data[i][j - 1].isnumeric() and (i, j - 1) in symbol_adjacent:  # sinistra
-                            number_adjacent[(i, j)].append((i, j - 1))
+                    if (
+                        data[i - 1][j - 1].isnumeric() and (i - 1, j - 1) in symbol_adjacent
+                    ):  # sopra sinistra
+                        number_adjacent[(i, j)].append((i - 1, j - 1))
+                    if data[i - 1][j].isnumeric() and (i - 1, j) in symbol_adjacent:  # sopra
+                        number_adjacent[(i, j)].append((i - 1, j))
+                    if row[j - 1].isnumeric() and (i, j - 1) in symbol_adjacent:  # sinistra
+                        number_adjacent[(i, j)].append((i, j - 1))
 
     return number_adjacent

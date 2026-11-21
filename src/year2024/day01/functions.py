@@ -19,7 +19,7 @@ def part_1(data):
     first_ordered = sorted(first)
     second_ordered = sorted(second)
 
-    diff = [abs(a - b) for a, b in zip(first_ordered, second_ordered)]
+    diff = [abs(a - b) for a, b in zip(first_ordered, second_ordered, strict=False)]
 
     return sum(diff)
 

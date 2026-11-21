@@ -82,9 +82,7 @@ def evaluate_neighbors(p, data, energized, visited):
                 new_points = [Point(x=p.x + 1, y=p.y, direction=Direction.D)]
 
         elif p.direction == Direction.D:
-            if data[p.x][p.y] == Connections.D.value:
-                new_points = [Point(x=p.x + 1, y=p.y, direction=Direction.D)]
-            elif data[p.x][p.y] == Connections.NS.value:
+            if data[p.x][p.y] == Connections.D.value or data[p.x][p.y] == Connections.NS.value:
                 new_points = [Point(x=p.x + 1, y=p.y, direction=Direction.D)]
             elif data[p.x][p.y] == Connections.EW.value:
                 new_points = [
@@ -97,9 +95,7 @@ def evaluate_neighbors(p, data, energized, visited):
                 new_points = [Point(x=p.x, y=p.y - 1, direction=Direction.L)]
 
         elif p.direction == Direction.U:
-            if data[p.x][p.y] == Connections.D.value:
-                new_points = [Point(x=p.x - 1, y=p.y, direction=Direction.U)]
-            elif data[p.x][p.y] == Connections.NS.value:
+            if data[p.x][p.y] == Connections.D.value or data[p.x][p.y] == Connections.NS.value:
                 new_points = [Point(x=p.x - 1, y=p.y, direction=Direction.U)]
             elif data[p.x][p.y] == Connections.EW.value:
                 new_points = [

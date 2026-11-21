@@ -13,7 +13,7 @@ def part_1(data):
 def part_2(data):
     winning_dict, my_numbers_dict = parsing(data)
 
-    count_dict = {x: 1 for x in winning_dict.keys()}
+    count_dict = dict.fromkeys(winning_dict.keys(), 1)
 
     for card_id, winning in winning_dict.items():
         my_winning_numbers = sum(number in my_numbers_dict[card_id] for number in winning)

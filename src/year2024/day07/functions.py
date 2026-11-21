@@ -18,7 +18,7 @@ def evaluate_combinations(data, operations):
         possible_combinations = list(product(operations, repeat=num_operations))
         for comb in possible_combinations:
             calc = f"{operands[0]}"
-            for num, op in zip(operands[1:], list(comb)):
+            for num, op in zip(operands[1:], list(comb), strict=False):
                 calc += f"{op}{num}"
 
                 calc = str(eval(calc))

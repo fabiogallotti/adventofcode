@@ -57,9 +57,9 @@ def part_1(data):
                     false = value["test"][2]
                     monkeys[false]["s_it"].append(new_it)
 
-                monkeys[monkey]["s_it"] = monkeys[monkey]["s_it"][1:]
+                monkeys[monkey]["s_it"] = value["s_it"][1:]
 
-                if "inspected" not in monkeys[monkey]:
+                if "inspected" not in value:
                     monkeys[monkey]["inspected"] = 1
                 else:
                     monkeys[monkey]["inspected"] += 1
@@ -92,17 +92,17 @@ def part_2(data):
 
                 new_it = new_it % lcm
 
-                test = monkeys[monkey]["test"][0]
+                test = value["test"][0]
                 if new_it % test == 0:
-                    true = monkeys[monkey]["test"][1]
+                    true = value["test"][1]
                     monkeys[true]["s_it"].append(new_it)
                 else:
-                    false = monkeys[monkey]["test"][2]
+                    false = value["test"][2]
                     monkeys[false]["s_it"].append(new_it)
 
-                monkeys[monkey]["s_it"] = monkeys[monkey]["s_it"][1:]
+                monkeys[monkey]["s_it"] = value["s_it"][1:]
 
-                if "inspected" not in monkeys[monkey]:
+                if "inspected" not in value:
                     monkeys[monkey]["inspected"] = 1
                 else:
                     monkeys[monkey]["inspected"] += 1
