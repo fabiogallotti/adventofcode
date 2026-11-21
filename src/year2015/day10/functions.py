@@ -1,7 +1,7 @@
 def concatenate_string(number_of_digits, digits):
     look_and_say = ""
     for i, elem in enumerate(number_of_digits):
-        look_and_say += number_of_digits[i] + digits[i]
+        look_and_say += elem + digits[i]
     return look_and_say
 
 

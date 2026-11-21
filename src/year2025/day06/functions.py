@@ -6,7 +6,7 @@ def preprocessing(data):
         numbers = elem.split(" ")
         list_numbers.append([int(num) for num in numbers if num])
 
-    vertical_list = list(zip(*list_numbers))
+    vertical_list = list(zip(*list_numbers, strict=False))
 
     return vertical_list, operations
 
@@ -28,10 +28,10 @@ def part_1(data):
 
 def preprocessing_part2(data):
     list_numbers = []
-    operations_with_whitespaces = [elem for elem in data[-1].split(" ")]
+    operations_with_whitespaces = list(data[-1].split(" "))
     operations = [elem for elem in data[-1].split(" ") if elem]
     i = [i for i, x in enumerate(operations_with_whitespaces) if x]
-    lengths = [j - k for k, j in zip(i, [*i[1:], len(operations_with_whitespaces)])]
+    lengths = [j - k for k, j in zip(i, [*i[1:], len(operations_with_whitespaces)], strict=False)]
 
     for elem in data[:-1]:
         numbers = elem.split(" ")
@@ -48,7 +48,7 @@ def preprocessing_part2(data):
 
         list_numbers.append(numbers)
 
-        vertical_list = list(zip(*list_numbers))
+        vertical_list = list(zip(*list_numbers, strict=False))
         vertical_list_of_list = [
             vertical_list[sum(lengths[:i]) : sum(lengths[: i + 1])] for i in range(len(lengths))
         ]

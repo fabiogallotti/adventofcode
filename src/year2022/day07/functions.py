@@ -11,7 +11,7 @@ class File(BaseModel):
 class Dir(BaseModel):
     name: str
     parent: str | None = None
-    dirs: list["Dir"] | None = None
+    dirs: list[Dir] | None = None
     files: list[File] | None = None
 
     def get_total_size(self):

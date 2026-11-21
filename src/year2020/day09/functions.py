@@ -5,8 +5,7 @@ def find_not_sum_preamble(data, length):
                 if data[length] == data[i] + data[j]:
                     data.pop(0)
                     break
-    else:
-        return data[length]
+    return data[length]
 
 
 def sum_weakness(data, invalid):

@@ -18,8 +18,8 @@ def preprocessing(data):
     intervals = [elem[1:] if len(elem) == 4 else elem[2:] for elem in fields]
     fields = [elem[:1] if len(elem) == 4 else [f"{elem[0]}_{elem[1]}"] for elem in fields]
 
-    for i, elem in enumerate(intervals):
-        intervals[i].remove("or")
+    for _i, elem in enumerate(intervals):
+        elem.remove("or")
 
     return fields, intervals, myticket, nearby
 

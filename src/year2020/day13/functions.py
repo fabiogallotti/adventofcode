@@ -23,7 +23,7 @@ def part_1(data):
 
 
 def part_2(values_position):
-    values = [value for value in values_position]
+    values = list(values_position)
 
     step = values[0]
     timestamp = 0

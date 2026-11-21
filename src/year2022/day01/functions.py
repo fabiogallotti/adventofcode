@@ -4,13 +4,11 @@ def part_1(data):
     elf_calories = 0
     for i, elem in enumerate(data):
         if elem == "":
-            if elf_calories > max_calories:
-                max_calories = elf_calories
+            max_calories = max(max_calories, elf_calories)
             elf_calories = 0
         elif i == len(data) - 1:
             elf_calories += int(elem)
-            if elf_calories > max_calories:
-                max_calories = elf_calories
+            max_calories = max(max_calories, elf_calories)
         else:
             elf_calories += int(elem)
 

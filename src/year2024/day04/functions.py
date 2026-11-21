@@ -52,20 +52,23 @@ def part_2(data):
             bottom_left = data[i + 1][j - 1]
             bottom_right = data[i + 1][j + 1]
 
-            if (top_left == "M" and bottom_right == "S") and (
-                bottom_left == "M" and top_right == "S"
-            ):
-                count += 1
-            elif (top_left == "S" and bottom_right == "M") and (
-                bottom_left == "S" and top_right == "M"
-            ):
-                count += 1
-            elif (top_left == "M" and bottom_right == "S") and (
-                bottom_left == "S" and top_right == "M"
-            ):
-                count += 1
-            elif (top_left == "S" and bottom_right == "M") and (
-                bottom_left == "M" and top_right == "S"
+            if (
+                (
+                    (top_left == "M" and bottom_right == "S")
+                    and (bottom_left == "M" and top_right == "S")
+                )
+                or (
+                    (top_left == "S" and bottom_right == "M")
+                    and (bottom_left == "S" and top_right == "M")
+                )
+                or (
+                    (top_left == "M" and bottom_right == "S")
+                    and (bottom_left == "S" and top_right == "M")
+                )
+                or (
+                    (top_left == "S" and bottom_right == "M")
+                    and (bottom_left == "M" and top_right == "S")
+                )
             ):
                 count += 1
     return count

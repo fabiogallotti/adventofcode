@@ -43,9 +43,11 @@ def part_1(data):
 
     locations = []
     for seed in seeds:
-        for _, map_list in maps.items():
+        for map_list in maps.values():
             for map_ in map_list:
-                if map_.source_range_start <= seed < map_.source_range_start + map_.range_length:
+                min_ = map_.source_range_start
+                max_ = map_.source_range_start + map_.range_length - 1
+                if min_ <= seed <= max_:
                     diff = seed - map_.source_range_start
                     seed = map_.destination_range_start + diff
                     break
@@ -79,7 +81,7 @@ def part_2(data):
     for interval in seeds_intervals:
         working_intervals = [interval]
 
-        for _, map_list in maps.items():
+        for map_list in maps.values():
             working_intervals = [
                 SeedIntervals(start=x.start, end=x.end, transformed=False)
                 for x in working_intervals
@@ -100,11 +102,10 @@ def evaluate_intervals(intervals, map_):
     new_intervals = []
     for interval in intervals:
         if interval.transformed is False:
-            if interval.end < map_.source_range_start:
-                new_intervals.append(
-                    SeedIntervals(start=interval.start, end=interval.end, transformed=False)
-                )
-            elif interval.start >= map_.source_range_start + map_.range_length:
+            if (
+                interval.end < map_.source_range_start
+                or interval.start >= map_.source_range_start + map_.range_length
+            ):
                 new_intervals.append(
                     SeedIntervals(start=interval.start, end=interval.end, transformed=False)
                 )

@@ -37,8 +37,8 @@ def preprocessing(data, expansion):
                 not_empty_rows.add(int(i))
                 not_empty_cols.add(int(j))
 
-    empty_rows = sorted(list(set(range(len(data))) - not_empty_rows))
-    empty_cols = sorted(list(set(range(len(data[0]))) - not_empty_cols))
+    empty_rows = sorted(set(range(len(data))) - not_empty_rows)
+    empty_cols = sorted(set(range(len(data[0]))) - not_empty_cols)
 
     for galaxy in galaxies:
         new_galaxy_x = galaxy.x

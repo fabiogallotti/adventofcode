@@ -5,7 +5,7 @@ data = read_input("input.txt")
 
 def orbits(data):
     count = 0
-    for key in data.keys():
+    for key in data:
         count = calculate(data, key, count)
     return count
 

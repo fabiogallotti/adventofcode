@@ -10,15 +10,15 @@ def preprocessing(elem):
 
 def occurences_between_min_max(minimum, maximum, letter, password, counter):
     occurrences = password.count(letter)
-    if minimum <= occurrences and occurrences <= maximum:
+    if minimum <= occurrences <= maximum:
         counter += 1
     return counter
 
 
 def check_positions(minimum, maximum, letter, password, counter):
-    if password[minimum - 1] == letter and password[maximum - 1] != letter:
-        counter += 1
-    elif password[minimum - 1] != letter and password[maximum - 1] == letter:
+    if (password[minimum - 1] == letter and password[maximum - 1] != letter) or (
+        password[minimum - 1] != letter and password[maximum - 1] == letter
+    ):
         counter += 1
     return counter
 

@@ -66,7 +66,7 @@ def part_2(data):
     rocks = preprocessing(data)
     sand_start = (500, 0)
 
-    max_y = max(y for (_, y) in rocks.keys())
+    max_y = max(y for (_, y) in rocks)
 
     floor = [(x, max_y + 2) for x in range(-1000, 1000)]
     for elem in floor:

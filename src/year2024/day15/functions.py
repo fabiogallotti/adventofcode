@@ -28,7 +28,7 @@ def preprocessing(data):
             movements = "".join(data[i + 1 :])
             break
         for j in range(len(row)):
-            value = data[i][j]
+            value = row[j]
             if value == "#":
                 walls.append(Position(x=i, y=j))
             elif value == "@":
@@ -115,7 +115,7 @@ def preprocessing_2(data):
         if row == "":
             break
         for j in range(len(row)):
-            value = data[i][j]
+            value = row[j]
             if value == "#":
                 walls.append(Position2(x=i, y=j, value=value))
             elif value in ["[", "]"]:

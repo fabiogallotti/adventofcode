@@ -18,7 +18,7 @@ def preprocessing(data):
         data[i][j] = ord(data[i][j]) - ord("a")
         unvisited_nodes.append((i, j))
 
-    node_distance = dict(zip(unvisited_nodes, [99999] * h * w))
+    node_distance = dict(zip(unvisited_nodes, [99999] * h * w, strict=False))
 
     return data, start, end, unvisited_nodes, node_distance
 

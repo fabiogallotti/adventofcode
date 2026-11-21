@@ -1,3 +1,6 @@
+import contextlib
+
+
 def read_input(filename):
     with open(filename) as f:
         return [int(elem) for elem in f.read().split(",")]
@@ -25,24 +28,18 @@ def calculate(data, ainput):
 
         one_modes = data[one] if not int(modes[0]) else one
 
-        try:
+        with contextlib.suppress(Exception):
             two_modes = data[two] if not int(modes[1]) else two
-        except Exception:
-            pass
 
         if op_code == 1:
             result = one_modes + two_modes
-            try:
+            with contextlib.suppress(Exception):
                 data[three] = result
-            except Exception:
-                pass
             i += 4
         elif op_code == 2:
             result = one_modes * two_modes
-            try:
+            with contextlib.suppress(Exception):
                 data[three] = result
-            except Exception:
-                pass
             i += 4
         elif op_code == 3:
             if not int(modes[0]):

@@ -32,9 +32,9 @@ def part_2(data):
     total = 0
 
     for row in data:
-        for digit in DIGITS:
+        for digit, value in DIGITS.items():
             if digit in row:
-                replace = f"{digit}{DIGITS[digit]}{digit}"
+                replace = f"{digit}{value}{digit}"
                 row = row.replace(digit, replace)
 
         calibration[0] = calculate_digit(row)
